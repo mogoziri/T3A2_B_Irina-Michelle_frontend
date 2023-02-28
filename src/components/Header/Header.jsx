@@ -1,59 +1,60 @@
 import React from 'react'
 
 import { Container, Row, Col } from 'reactstrap';
-import { Link, NavLink } from "react-router-dom";
+import { Link, /*NavLink*/ } from "react-router-dom";
 import '../../styles/header.css';
 
-const navLinks = [
-  {
-    path:"/home",
-    display: "Home"
-  },
-  {
-    path:"/cars",
-    display: "Car Details"
-  },
-  {
-    path:"/cars",
-    display: "Car Listings"
-  },
-  {
-    path:"/cars",
-    display: "Car Rating"
-  },
-  {
-    path:"/cars",
-    display: "List My Car"
-  },
-  {
-    path:"/log_in",
-    display: "Log In"
-  },
-  {
-    path:"/bookings",
-    display: "Owner Booking Ref"
-  },
-  {
-    path:"/profile",
-    display: "Owner Profile"
-  },
-  {
-    path:"/profile: slug",
-    display: "Rate User"
-  },
-  {
-    path:"/sign_up",
-    display: "Sign Up"
-  },
-  {
-    path:"/bookings: slug",
-    display: "User Booking Ref"
-  },
-  {
-    path:"/profile: slug",
-    display: "User Profile"
-  },
-]
+// ToDo: Add later if needed
+// const navLinks = [
+//   {
+//     path:"/home",
+//     display: "Home"
+//   },
+//   {
+//     path:"/cars",
+//     display: "Car Details"
+//   },
+//   {
+//     path:"/cars",
+//     display: "Car Listings"
+//   },
+//   {
+//     path:"/cars",
+//     display: "Car Rating"
+//   },
+//   {
+//     path:"/cars",
+//     display: "List My Car"
+//   },
+//   {
+//     path:"/log_in",
+//     display: "Log In"
+//   },
+//   {
+//     path:"/bookings",
+//     display: "Owner Booking Ref"
+//   },
+//   {
+//     path:"/profile",
+//     display: "Owner Profile"
+//   },
+//   {
+//     path:"/profile: slug",
+//     display: "Rate User"
+//   },
+//   {
+//     path:"/sign_up",
+//     display: "Sign Up"
+//   },
+//   {
+//     path:"/bookings: slug",
+//     display: "User Booking Ref"
+//   },
+//   {
+//     path:"/profile: slug",
+//     display: "User Profile"
+//   },
+// ]
 
 const Header = () => {
   return <header className="header">
