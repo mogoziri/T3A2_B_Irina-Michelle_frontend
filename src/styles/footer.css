@@ -1,0 +1,77 @@
+.footer {
+    background: #8338CE;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.footer__logo h1 a span {
+    font-size:1.2rem;
+}
+
+.footer__logo h1 a l {
+    font-style: 1.2em;
+}
+
+.footer__logo h1 a {
+   text-decoration: none;
+   color: #FFF;
+   font-weight: 400;
+}
+
+.footer__logo h1 {
+    line-height: 1.4rem;
+} 
+
+.footer__logo-content {
+    color: #fff;
+    margin-top: 15px;
+    line-height: 20px;
+    font-size: small;
+    font-weight: 300;
+}
+
+.quick__link {
+    border: none !important;
+    background: transparent !important;
+}
+
+.quick__link a {
+color: #fff;
+text-decoration: none;
+transition: .3s;
+}
+
+.quick__link a:hover {
+    color: orange;
+}
+
+.footer__link-title {
+    color: #fff;
+}
+
+.footer__bottom {
+    color: #fff;
+    border-top: 1px solid #8338CE;
+}
+
+/*/if needed for search */
+/* .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border: 1px solid;
+}
+
+.search input {
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.search span i {
+    color: #fff;
+    
+} */
+
