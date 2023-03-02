@@ -73,13 +73,13 @@ const Header = () => {
           <Col lg='6' md='6' sm='6' >
           <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
             <Link to='#' className=" d-flex align-items-center gap-1" >
-            <i class="ri-user-line"></i> Sign Up </Link>
+            <i className="ri-user-line"></i> Sign Up </Link>
 
             <Link to='#'className=" d-flex align-items-center gap-1">
-            <i class="ri-car-line"></i> List My Car </Link>
+            <i className="ri-car-line"></i> List My Car </Link>
 
             <Link to='#'className=" d-flex align-items-center gap-1"> 
-            <i class="ri-login-box-line"></i> Log In </Link>
+            <i className="ri-login-box-line"></i> Log In </Link>
           </div>
           </Col>
         </Row>
