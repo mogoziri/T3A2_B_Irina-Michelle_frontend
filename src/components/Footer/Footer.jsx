@@ -69,7 +69,7 @@ const Footer = () => {
         <Col lg='2' md='4' sm='12' >
         <div className="logo footer__logo">
               <h1><Link to ='/home' className='d-flex align-items-center gap-1'>
-              <i class="ri-roadster-fill"></i>
+              <i className="ri-roadster-fill"></i>
                 <span>CARENTAL</span>
               </Link>
               </h1>
