@@ -1,0 +1,32 @@
+:root {
+    --primary1: #3a86ff;
+    --primary2: #fff;
+    --primary3: #3a85ffb8;
+    --primary4: #fb5607;
+}
+
+.section__subtitle {
+    color: var(--primary4);
+}
+
+/* .section__blurb {
+    
+} */
+
+.info__section-item {
+    column-gap: 3rem;
+}
+
+.info__section-item p {
+    color: var(--primary1);
+    font-size: 1.1rem;
+} 
+
+.info__section-item p i {
+    color: var(--primary4);
+    font-size: 1.1rem;
+}
+
+.quick__link {
+    text-decoration: none;
+}

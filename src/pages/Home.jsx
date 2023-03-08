@@ -3,6 +3,7 @@ import React from "react";
 import TopSlider from "../components/UI/TopSlider";
 import Helmet from "../components/Helmet/Helmet";
 import FindCarForm from "../components/UI/FindCarForm";
+import InfoSection from "../components/UI/InfoSection";
 
 import { Container, /*Row,*/ Col } from "reactstrap";
 
@@ -29,8 +30,11 @@ const Home = () => {
               {/* </Row> */}
             </Container> 
           </div>
-
         </section>
+
+        {/* Info section */}
+        <InfoSection />
+
         </Helmet>
     );
 };
