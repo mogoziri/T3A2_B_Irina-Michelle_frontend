@@ -63,11 +63,19 @@ const Header = () => {
       <Container>
         <Row>
           <Col lg='6' md='6' sm='6' >
-          <div className="header__top__left d-flex">
-            <Link to='/home' className=" d-flex align-items-center gap-1" >
-              <span>CARENTAL</span></Link>
-              {/* <span className="header_top_carental"></span> */}
+          <div className="logo footer__logo">
+              <h1><Link to ='/home' className='d-flex align-items-center gap-1'>
+              <i className="ri-roadster-fill"></i>
+                <span>CARENTAL</span>
+              </Link>
+              </h1>
             </div>
+
+          {/* <div className="header__top__left d-flex">
+            <Link to='/home' className=" d-flex align-items-center gap-1" >
+              <span>CARENTAL</span></Link> */}
+              {/* <span className="header_top_carental"></span> */}
+            {/* </div> */}
           </Col>
 
           <Col lg='6' md='6' sm='6' >
