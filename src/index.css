@@ -1,6 +1,13 @@
 /*google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
+
+:root {
+  --primary1: #3a86ff;
+  --primary2: #fff;
+  --primary3: #3a85ffb8;
+  --primary4: #fb5607;
+}
 /*base styles*/
 *{
   margin: 0;
@@ -9,6 +16,8 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+
+
 /*pre-define css*/
 h1, 
 h2, 
@@ -16,7 +25,7 @@ h3,
 h4, 
 h5, 
 h6 {
-  color: #8338CE;
+  color: var(--primary1);
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -46,13 +55,13 @@ ul {
 }
 
 .section_title {
- color: #3A86FF;
+ color: var(--primary1);
  font-weight: 600;
  font-size: 2rem;
 }
 
 .section_subtitle {
-  color: #FFBE0B;
+  color: var(--primary4);
   font-weight: 600;
   font-size: 1.2rem;
  }
@@ -69,17 +78,17 @@ ul {
 
  .btn {
   padding: 7px 15px;
-  background: #8338CE;
-  color: #fff;
+  background: var(--primary1);
+  color: var(--primary2);
   border: none;
   outline: none;
   border-radius: 5px;
-  transition: .3s;
+  transition: 0.3s;
  }
 
  .btn:hover{
-  color: #fff;
-  background: #8338ce82;
+  color: var(--primary2) !important;
+  background: var(--primary1)
  }
 
  @media only screen and (max-width:768px) {
