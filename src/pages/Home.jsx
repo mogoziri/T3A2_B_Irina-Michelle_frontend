@@ -4,7 +4,7 @@ import TopSlider from "../components/UI/TopSlider";
 import Helmet from "../components/Helmet/Helmet";
 import FindCarForm from "../components/UI/FindCarForm";
 
-import { Container, Row, Col } from "reactstrap";
+import { Container, /*Row,*/ Col } from "reactstrap";
 
 const Home = () => {
     return (
