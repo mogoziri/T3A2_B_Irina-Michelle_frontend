@@ -1,7 +1,15 @@
+import img1 from "../Assets/all-images/cars-img/Toyota-Land-Cruiser.png";
+import img2 from "../Assets/all-images/cars-img/Nissan-X-Trail.png";
+import img3 from "../Assets/all-images/cars-img/Land-Rover-Defender.png";
+import img4 from "../Assets/all-images/cars-img/Mazda-3.png";
+import img5 from "../Assets/all-images/cars-img/Toyota-Corolla.png";
+import img6 from "../Assets/all-images/cars-img/Hyundai-i30.png";
+
+
 const carData = [ 
     {
         id: 1,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ624XrG0GL2p5sKpFpuol4gGeD_mK_aKCg63L01FbbB-vKmttWaSnDXNS_A6M43FwHlD4&usqp=CAU",
+        imgUrl: img1,
         type: "SUV",
         model: "Toyota Land Cruiser",
         rating:5,
@@ -12,7 +20,7 @@ const carData = [
       },
       {
         id: 2,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdCrC_H_AhYd9VhrX-4a9XxnJwkwJmoQES3w&usqp=CAU",
+        imgUrl: img2,
         type: "SUV",
         model: "Nissan X Trail",
         rating: 4.8,
@@ -23,7 +31,7 @@ const carData = [
       },
       {
         id: 3,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRala4aVEUdfJA-sS2E1bIOypQOIcl5-8969Wl5xXWZwoW5F-HXGekv2SLpQkMl7hGEKi4&usqp=CAU",
+        imgUrl: img3,
         type: "SUV",
         model: "Land Rover Defender",
         rating: 5,
@@ -34,7 +42,7 @@ const carData = [
       },
       {
         id: 4,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxOVz4ugExRpIn5cf3c4KpSM1VmfAZNvBSiGq11FfXEzZ1SZlLeMWv8QwyVuBKAazLHs&usqp=CAU",
+        imgUrl: img4,
         type: "Sedan",
         model: "Mazda 3",
         rating: 4.5,
@@ -44,8 +52,8 @@ const carData = [
         description: "Great family car, good boot space for luggage, child seat available."
       },
       {
-        id: 4,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg2NR9hIAYbU__HrgNb3pURliDc-IB-R_xBA&usqp=CAU",
+        id: 5,
+        imgUrl: img5,
         type: "Hatch Back",
         model: "Toyota Corolla",
         rating: 5,
@@ -55,8 +63,8 @@ const carData = [
         description: "Perfect for around the city driving. Easy to park."
       },
       {
-        id: 5,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2IAGPwT6nwqFEcKLedCBnH4VI3vgXk-0vaK877296jD_2c5BHCnNRnWQcuRUFJofRpCM&usqp=CAU",
+        id: 6,
+        imgUrl: img6,
         type: "Hatch Back",
         model: "Hyundai i30",
         rating: 4.2,

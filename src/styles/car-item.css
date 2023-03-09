@@ -1,0 +1,55 @@
+:root {
+    --primary1: #3a86ff;
+    --primary2: #fff;
+    --primary3: #3a86ff41;
+    --primary4: #fb5607;
+}
+
+.car__item {
+    border: 1px solid var(--primary3);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.car__item-info span i {
+    color: var(--primary4);
+    font-size: 1.1rem;
+    
+}
+
+.car__item-btn {
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background: var(--primary1);
+    padding: 8px 0px;
+}
+
+.car__item-btn a {
+    text-decoration: none;
+    color: var(--primary2);
+    font-weight: 500;
+}
+
+.car__item-btn a:hover {
+    color: var(--primary2)
+}
+
+/* .car__btn-details {
+    background: var(primary4);
+    border-radius: 0px 4px 4px 0px;
+} */
+
+.car__btn-rent {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.car__item-content h4 {
+    font-size: 1.8rem;
+}
+
+.car__item-content h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
