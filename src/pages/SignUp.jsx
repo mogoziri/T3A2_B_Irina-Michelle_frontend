@@ -1,7 +1,20 @@
 import React from "react";
+import SignUpForm from "../components/UI/SignUpForm";
 
 const SignUp = () => {
-    return <div>SignUp</div>;
+  return (
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <SignUpForm />
+    </div>
+  );
 };
 
-export default SignUp
+export default SignUp;
