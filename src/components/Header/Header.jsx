@@ -63,7 +63,7 @@ import { useAuth } from "../../Authentication/auth-provider";
 // ]
 
 const Header = () => {
-  const { logout, isLoggedIn } = useAuth();
+  const { logout, /*isLoggedIn*/ } = useAuth();
 
 
   return <header className="header">

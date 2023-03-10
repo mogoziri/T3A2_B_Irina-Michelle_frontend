@@ -3,12 +3,10 @@ import {
     Button,
     Container,
     Grid,
-    Link,
     TextField,
     Typography,
   } from "@mui/material";
   import React, { useState } from "react";
-  import { Link as RouterLink } from "react-router-dom";
   import { useAuth } from "../../Authentication/auth-provider";
   
   const LogInForm = () => {
@@ -36,7 +34,6 @@ import {
         >
           <Typography variant="h6">Welcome Back! Sign In</Typography>
 
-          
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
