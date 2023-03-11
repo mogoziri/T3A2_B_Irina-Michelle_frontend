@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import Cookies from 'js-cookie';
 import * as usersApi from "../API/api-users";
 
 const AuthContext = React.createContext({});
@@ -16,6 +17,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem("user-token");
+    Cookies.remove("accessToken");
     setUser(undefined);
     setIsLoggedIn(false);
     navigate("/");
@@ -66,8 +68,8 @@ export const AuthProvider = ({ children }) => {
       .then((user) => {
         setUser(user);
         setIsLoggedIn(true);
-        localStorage.setItem("user-token", JSON.stringify(user));
-        navigate(-1);
+        localStorage.setItem("user-token", user);
+        navigate("/");
       })
       .catch(() => {
         setError(
