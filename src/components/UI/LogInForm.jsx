@@ -29,8 +29,7 @@ import {
             alignItems: "center",
             marginBottom: 43,
             marginTop: 10,
-  }
-          }
+          }}
         >
           <Typography variant="h6">Welcome Back! Login Here</Typography>
 
