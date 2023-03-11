@@ -8,42 +8,30 @@ import FindCarForm from "../components/UI/FindCarForm";
 import InfoSection from "../components/UI/InfoSection";
 
 
-import { Container, /*Row,*/ Col } from "reactstrap";
+import { Container, Col } from "reactstrap";
 
 const Home = () => {
-    return (
+  return (
     <Helmet title="Home">
-
     {/* Top Slider section  */}
-        <section className="p-0 top__slider-section">
-          <TopSlider />
-
+      <section className="p-0 top__slider-section">
+        <TopSlider />
           <div className="top_form">
             <Container>
-              {/* <Row className="form__row">
-                <Col lg='4' md='4'>
-                   <div className="find__cars-left">
-                    <h2>Search Cars</h2>
-                    </div> 
-                </Col> */}
-
-                <Col lg='8' md='8' sm='12'>
-                   <FindCarForm />
-                </Col>
-              {/* </Row> */}
+              <Col lg='8' md='8' sm='12'>
+                  <FindCarForm />
+              </Col>
             </Container> 
           </div>
-        </section>
-
+      </section>
         {/* Info section */}
-        <section className="p-0 info__section">
-          <Container>
-            <InfoSection />
-          </Container>
-        </section>
-
-        </Helmet>
-    );
+      <section className="p-0 info__section">
+        <Container>
+          <InfoSection />
+        </Container>
+      </section>
+    </Helmet>
+  );
 };
 
 export default Home

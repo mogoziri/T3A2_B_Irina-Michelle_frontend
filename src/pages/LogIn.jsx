@@ -1,7 +1,10 @@
 import React from "react";
+import LogInForm from "../components/UI/LogInForm";
 
 const LogIn = () => {
-    return <div>LogIn</div>;
+  return (
+      <LogInForm />
+  );
 };
 
 export default LogIn
