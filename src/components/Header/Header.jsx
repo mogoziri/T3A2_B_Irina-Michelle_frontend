@@ -170,13 +170,13 @@ const Header = () => {
                 ) : (
                   <>
                     {/* <div className="header__top__right d-flex align-items-center justify-content-end gap-2"></div> */}
-                      <Button href="/SignUp" color="inherit"/*className=' d-flex align-items-right gap-1'*/>
+                      <Button href="/signup" color="inherit"/*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-user-line"></i>Sign Up {/* link to Sign Up page */}
                       </Button>
                       <Button href="/ListMyCar" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-car-line"></i> List My Car {/* link to List My Car page */}
                       </Button>
-                      <Button href="/LogIn" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
+                      <Button href="/login" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-login-box-line"></i>Login {/* link to Log In page */}
                       </Button>
                       {/* <Button color="inherit" onClick={ () => logout()}>
