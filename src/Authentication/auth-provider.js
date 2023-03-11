@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
         navigate("/");
       })
       .catch((error) => {
-        console.log({error})
+        // console.log({error})
         setError(error.response.data.data)
       })
       .finally(() => setLoading(false));

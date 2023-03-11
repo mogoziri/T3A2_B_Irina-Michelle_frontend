@@ -1,6 +1,7 @@
 import {
     Box,
     Button,
+    Alert,
     Container,
     Grid,
     TextField,
@@ -32,7 +33,7 @@ import {
   }
           }
         >
-          <Typography variant="h6">Welcome Back! Sign In</Typography>
+          <Typography variant="h6">Welcome Back! Login Here</Typography>
 
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -69,10 +70,10 @@ import {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Register
+             Submit 
             </Button>
 
-            {!!error && <Typography>{error}</Typography>}
+            {!!error && <Alert severity="error">{error}</Alert>}
             
           </Box>
         </Box>
