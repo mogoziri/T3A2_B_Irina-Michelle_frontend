@@ -1,7 +1,7 @@
 import React from "react";
 
-const OwnerProfile = () => {
+const Profile = () => {
     return <div>OwnerProfile</div>;
 };
 
-export default OwnerProfile
+export default Profile

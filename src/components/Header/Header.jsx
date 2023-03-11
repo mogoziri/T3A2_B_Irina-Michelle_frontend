@@ -3,6 +3,12 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
 import { Link, /*NavLink*/ } from "react-router-dom";
 import '../../styles/header.css';
+import { Button } from '@mui/material'
+import { useAuth } from "../../Authentication/auth-provider";
+
+
+// import UserLogIn from "../components/UI/UserLogIn";
+// import SignUp from "../UI/SignUpForm";
 
 // ToDo: Add later if needed
 // const navLinks = [
@@ -57,6 +63,9 @@ import '../../styles/header.css';
 // ]
 
 const Header = () => {
+  const { logout, /*isLoggedIn*/ } = useAuth();
+
+
   return <header className="header">
     {/* Header Top */}
     <div className="header_top">
@@ -79,88 +88,76 @@ const Header = () => {
           </Col>
 
           <Col lg='6' md='6' sm='6' >
-          <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-            <Link to='#' className=" d-flex align-items-center gap-1" >
-            <i className="ri-user-line"></i> Sign Up </Link>
 
-            <Link to='#'className=" d-flex align-items-center gap-1">
+          <div className="header__top__right d-flex align-items-center justify-content-end gap-2">
+            <Link to='/SignUp' className=" d-flex align-items-center gap-1" >
+            <i className="ri-user-line"></i> Sign Up </Link> 
+            {/* link to Sign Up page */}
+
+            <Link to='/ListMyCar'className=" d-flex align-items-center gap-1">
             <i className="ri-car-line"></i> List My Car </Link>
+             {/* link to List My Car page */}
 
-            <Link to='#'className=" d-flex align-items-center gap-1"> 
+            <Link to='LogIn'className=" d-flex align-items-center gap-1"> 
             <i className="ri-login-box-line"></i> Log In </Link>
+             {/* link to Log In page */}
           </div>
+
+           {/* {isLoggedIn ? (
+          //   <>
+          //     <Tooltip title="Open userLinks">
+          //       <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+          //         <Avatar
+          //           alt={username}
+          //           src={`https://avatars.dicebear.com/api/initials/:${username}.svg?chars=1`}
+          //         />
+          //       </IconButton>
+          //     </Tooltip>
+          //     <Menu
+          //       sx={{ mt: "45px" }}
+          //       id="menu-appbar"
+          //       anchorEl={anchorElUser}
+          //       anchorOrigin={{
+          //         vertical: "top",
+          //         horizontal: "right",
+          //       }}
+          //       keepMounted
+          //       transformOrigin={{
+          //         vertical: "top",
+          //         horizontal: "right",
+          //       }}
+          //       open={Boolean(anchorElUser)}
+          //       onClose={handleCloseUserMenu}
+          //     >
+          //       {userLinks.map(({ name, path }) => (
+          //         <MenuItem
+          //           href={path}
+          //           key={name}
+          //           onClick={handleCloseUserMenu}
+          //         >
+          //           <Typography textAlign="center">{name}</Typography>
+          //         </MenuItem>
+          //       ))}
+          //     </Menu>
+          //   </>
+          // ) : (
+          //   <>
+          //     <Button href="/sign-in" color="inherit">
+          //       Login
+          //     </Button>
+          //     <Button href="/sign-up" color="inherit">
+          //       Sign Up
+          //     </Button>
+          //</>
+          //   </>
+          // )} */}
+          <Button color="inherit" onClick={ () => logout()}>
+                Logout
+              </Button>
           </Col>
         </Row>
       </Container>
     </div>
-
-    {/* Middle of Header
-    <div className="header__middle">
-      <Container>
-        <Row>
-          <Col lg='4' md='3' sm='4'>
-            <div className="logo">
-              <h1><Link to ='/home' className='d-flex align-items-center gap-1>
-              <i class="ri-roadster-fill"></i>
-                <span>CARENTAL<br/> Service </span>
-              </Link></h1>
-            </div>
-          </Col>
-
-           <Col lg='43 md='3' sm='4'>
-            <div className="header__location d-flex align-items-center gap-2">
-            <span>
-            <i className="ri-earth-line"></i>
-            </span>
-            <div className="header__location-content"
-              <h4>NSW</h4>
-              <h6>Sydney</h6> 
-            </div>
-            </div>
-          </Col>
-
-            *35mins in*
-          <Col lg='2' md='3' sm='0' className=" d-flex align-items-center justify-content-end">
-            <button className='header__btn btn>
-              <Link to ='/contact'>
-              <span><i class="ri-car-line"></i></span>
-              </Link>
-            </button>
-          </Col>
-        </Row>
-      </Container>
-    </div> */}
-
-{/* main navigation*/}
-
-      {/* <div className="main_navbar">
-       <Container>
-        <div className="navigation_wrapper d-flex align-items-center justify-content-between">
-          <span className="mobile_menu">
-          <i className="ri-menu-line"></i>
-          </span> */}
-
-        {/* <div className="navigate">
-         <div className="menu">
-         {navLinks.map((item, index) => (
-                <NavLink to={item.path} className={navClass=> navClass.isActive ? 'nav__active nav__item' : 'nav__item'} key={index}>{item.display}</NavLink>
-              ))
-            }
-            </div>
-          </div> */}
-
-          {/* <div className="nav__right">
-            <div className="search__box">
-              <input type="text" placeholder="Search" />
-              <span>
-                <i className="ri-search-line"></i>
-              </span>
-            </div>
-          </div> */}
-           
-         {/* </div>
-       </Container>
-      </div> */}
   </header>
 };
 
