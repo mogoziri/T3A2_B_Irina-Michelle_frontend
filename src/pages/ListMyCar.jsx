@@ -1,7 +1,10 @@
 import React from "react";
+import ListMyCarForm from "../components/UI/ListMyCarForm";
 
 const ListMyCar = () => {
-    return <div>ListMyCar</div>;
+  return (
+      <ListMyCarForm />
+  );
 };
 
-export default ListMyCar
+export default ListMyCar;

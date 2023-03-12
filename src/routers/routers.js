@@ -13,8 +13,6 @@ import SignUp from "../pages/SignUp";
 import UserBooking from "../pages/UserBookingRef";
 import { useAuth } from "../Authentication/auth-provider";
 
-
-
 const Routers = () => {
     const { isLoggedIn } = useAuth();
 
@@ -25,7 +23,7 @@ const Routers = () => {
         <Route path="/cars/:slug" element={<CarDetails />} />
         <Route path="/cars" element={<CarListings />} />
         <Route path="/cars/:slug" element={<CarRatings />} />
-        <Route path="/cars/:slug" element={<ListMyCar />} />
+        <Route path="/list-my-car" element={<ListMyCar />} />
         <Route path="/login" element={isLoggedIn ? <Navigate replace to="/" /> : <LogIn />} /> {/*element={<LogIn />}*/}
         <Route path="/bookings" element={<OwnerBooking />} />
         <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate replace to="/" />} /> {/*element={<OwnerProfile />}*/}

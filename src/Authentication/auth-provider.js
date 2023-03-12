@@ -55,8 +55,7 @@ export const AuthProvider = ({ children }) => {
       })
       .catch((error) => {
         // console.log({error})
-        setError(error.response.data.data)
-      })
+        setError(error.response.data.data); /*where do I find this? in front end?*/      })
       .finally(() => setLoading(false));
   };
 
