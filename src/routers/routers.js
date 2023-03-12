@@ -20,16 +20,16 @@ const Routers = () => {
         <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/cars/:slug" element={<CarDetails />} />
+        <Route path="/cars/:id" element={<CarDetails />} />
         <Route path="/cars" element={<CarListings />} />
-        <Route path="/cars/:slug" element={<CarRatings />} />
+        <Route path="/cars/rating/:id" element={<CarRatings />} />
         <Route path="/list-my-car" element={<ListMyCar />} />
         <Route path="/login" element={isLoggedIn ? <Navigate replace to="/" /> : <LogIn />} /> {/*element={<LogIn />}*/}
         <Route path="/bookings" element={<OwnerBooking />} />
         <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate replace to="/" />} /> {/*element={<OwnerProfile />}*/}
-        <Route path="/profile/:slug" element={<RateUser />} />
+        <Route path="/profile/:id" element={<RateUser />} />
         <Route path="/signup" element={isLoggedIn ? <Navigate replace to="/" /> : <SignUp />}  /> {/*element={<SignUp />*/}
-        <Route path="/bookings/:slug" element={<UserBooking />} />
+        <Route path="/bookings/:id" element={<UserBooking />} />
         {/* <Route path="/profile/:slug" element={<UserProfile />} /> */}
         </Routes>
     );

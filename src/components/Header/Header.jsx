@@ -75,6 +75,9 @@ const Header = () => {
 
            {isLoggedIn ? (
                   <>
+                  <Button href="/ListMyCar" color="inherit" >
+                      <i className="ri-car-line"></i> List My Car {/* link to List My Car page */}
+                      </Button>
                     <Tooltip title="Open userProfile"> 
                     {/* <Tooltip title="Open userLinks">  */}
                       <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -107,6 +110,7 @@ const Header = () => {
                           onClick={handleCloseUserMenu}
                         >
                           <Typography textAlign="center">{name}</Typography>
+
                         </MenuItem>
                       ))}
                     </Menu>
@@ -117,7 +121,7 @@ const Header = () => {
                       <Button href="/signup" color="inherit"/*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-user-line"></i>Sign Up {/* link to Sign Up page */}
                       </Button>
-                      <Button href="/ListMyCar" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
+                      <Button href={ isLoggedIn ? "/ListMyCar" : "/signup" } color="inherit" /*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-car-line"></i> List My Car {/* link to List My Car page */}
                       </Button>
                       <Button href="/login" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
