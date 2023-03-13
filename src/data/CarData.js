@@ -9,7 +9,7 @@ import img6 from "../Assets/all-images/cars-img/Hyundai-i30.png";
 const carData = [ 
     {
         id: 1,
-        imgUrl: img1,
+        imgUrl: img1, /*Add URL for photos in postman*/
         type: "SUV",
         model: "Toyota Land Cruiser",
         rating:5,

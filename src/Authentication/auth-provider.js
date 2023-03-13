@@ -3,10 +3,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from 'js-cookie';
 import * as usersApi from "../API/api-users";
 
+
 const AuthContext = React.createContext({});
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState();
+  const [userId, setUserId] = useState();
   const [error, setError] = useState();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("user-token");
     Cookies.remove("accessToken");
-    setUser(undefined);
+    setUserId();
     setIsLoggedIn(false);
     navigate("/");
   };
@@ -30,10 +31,10 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     usersApi
       .getCurrentUser()
-      .then(({ isValid }) => {
+      .then(({ isValid, userId }) => {
         if (isValid) {
           setIsLoggedIn(true);
-          setUser(JSON.parse(localStorage.getItem("user-token")));
+          setUserId(userId);
         }
       })
       .catch(() => {
@@ -47,15 +48,15 @@ export const AuthProvider = ({ children }) => {
 
     usersApi
       .signUp({ username, password})
-      .then((user) => {
-        setUser(user);
+      .then(({ id, token }) => {
+        setUserId(id);
         setIsLoggedIn(true);
-        localStorage.setItem("user-token", JSON.stringify(user));
+        localStorage.setItem("user-token", token);
         navigate("/");
       })
       .catch((error) => {
         // console.log({error})
-        setError(error.response.data.data)
+        setError(error.response.data.data); /*where do I find this? in front end?*/      
       })
       .finally(() => setLoading(false));
   };
@@ -65,10 +66,10 @@ export const AuthProvider = ({ children }) => {
 
     usersApi
       .logIn({ username, password })
-      .then((user) => {
-        setUser(user);
+      .then(({ id, token }) => {
+        setUserId(id);
         setIsLoggedIn(true);
-        localStorage.setItem("user-token", user);
+        localStorage.setItem("user-token", token);
         navigate("/");
       })
       .catch(() => {
@@ -78,10 +79,10 @@ export const AuthProvider = ({ children }) => {
       })
       .finally(() => setLoading(false));
   };
-
+   
   const memoedValue = useMemo(
     () => ({
-      user,
+      userId,
       loading,
       error,
       isLoggedIn,
@@ -89,7 +90,7 @@ export const AuthProvider = ({ children }) => {
       signUp,
       logout,
     }),
-    [user, loading, error, isLoggedIn] // eslint-disable-line react-hooks/exhaustive-deps
+    [userId, loading, error, isLoggedIn] // eslint-disable-line react-hooks/exhaustive-deps
   );
 
   return (

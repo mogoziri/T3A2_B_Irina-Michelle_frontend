@@ -19,11 +19,11 @@ const InfoSection = () => {
                     </div>
                     <div className="info__section-item">
                         <p className="section-blurb">
-                           <i className="ri-roadster-line"></i> <Link className="quick__link" to="/ListMyCar"> List My Car</Link>
+                           <i className="ri-roadster-line"></i> <Link className="quick__link" to="/list-my-car"> List My Car</Link>
                         </p>
                     </div>
                 </div>
-            <Col lg='6' md='6'></Col>
+            {/* <Col lg='6' md='6'></Col> */}
         </Row>
     </Container>
   </section>
@@ -31,4 +31,3 @@ const InfoSection = () => {
 }
 
 export default InfoSection
-
