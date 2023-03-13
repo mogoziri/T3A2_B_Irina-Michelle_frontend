@@ -11,32 +11,6 @@
     padding-bottom: 15px; */
 }
 
-.footer__logo h1 a span {
-    font-size:1.2rem;
-}
-
-.footer__logo h1 a l {
-    font-style: 1.2em;
-}
-
-.footer__logo h1 a {
-   text-decoration: none;
-   color: var(--primary2);
-   font-weight: 400;
-}
-
-.footer__logo h1 {
-    line-height: 1.4rem;
-} 
-
-.footer__logo-content {
-    color: var(--primary2);
-    margin-top: 15px;
-    line-height: 20px;
-    font-size: small;
-    font-weight: 300;
-}
-
 .quick__link {
     border: none !important;
     background: transparent !important;
@@ -58,7 +32,17 @@
 
 .footer__bottom {
     color: var(--primary2);
-    border-top: 1px solid var(--primary1);
+    border-top: 10px solid var(--primary1);
+
+}
+
+.section__description {
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 1;
+    padding-top: 10px;
+    padding-bottom: 0;
 }
 
 /*/if needed for search */

@@ -3,7 +3,7 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
 import { Link, /*NavLink*/ } from "react-router-dom";
 import '../../styles/header.css';
-import { Button } from '@mui/material'
+import { Button, Box } from '@mui/material'
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -48,8 +48,8 @@ const Header = () => {
       <Container>
         <Row>
           <Col lg='6' md='6' sm='6' >
-          <div className="logo footer__logo">
-              <h1><Link to ='/home' className='d-flex align-items-center gap-1'>
+          <div className="logo">
+              <h1><Link to ='/' className='d-flex align-items-center gap-1'>
               <i className="ri-roadster-fill"></i>
                 <span>CARENTAL</span>
               </Link>
@@ -57,7 +57,7 @@ const Header = () => {
             </div>
           </Col>
 
-          <Col lg='6' md='6' sm='6'>
+          <Col lg='6' md='6' sm='6' >
 
           {/* <div className="header__top__right d-flex align-items-center justify-content-end gap-2">
             <Link to='/SignUp' className=" d-flex align-items-center gap-1" >
@@ -74,10 +74,10 @@ const Header = () => {
           {/* </div> */}
 
            {isLoggedIn ? (
-                  <>
-                  <Button href="/ListMyCar" color="inherit" >
+                  <Box display="flex" justifyContent="end">
+                  <Button href="/list-my-car" color="inherit" >
                       <i className="ri-car-line"></i> List My Car {/* link to List My Car page */}
-                      </Button>
+                  </Button>
                     <Tooltip title="Open userProfile"> 
                     {/* <Tooltip title="Open userLinks">  */}
                       <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -88,7 +88,7 @@ const Header = () => {
                       </IconButton>
                     </Tooltip>
                     <Menu
-                      sx={{ mt: "45px" }}
+                      sx={{ mt: "45px"}}
                       id="menu-appbar"
                       anchorEl={anchorElUser}
                       anchorOrigin={{
@@ -114,14 +114,14 @@ const Header = () => {
                         </MenuItem>
                       ))}
                     </Menu>
-                  </>
+                  </Box>
                 ) : (
-                  <>
-                    {/* <div className="header__top__right d-flex align-items-center justify-content-end gap-2"></div> */}
-                      <Button href="/signup" color="inherit"/*className=' d-flex align-items-right gap-1'*/>
+                  <Box display="flex" justifyContent="end">
+                     {/* <div className="header__top__right"></div> */}
+                      <Button href="/signup" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-user-line"></i>Sign Up {/* link to Sign Up page */}
                       </Button>
-                      <Button href={ isLoggedIn ? "/ListMyCar" : "/signup" } color="inherit" /*className=' d-flex align-items-right gap-1'*/>
+                      <Button href={ isLoggedIn ? "/list-my-car" : "/signup" } color="inherit" /*className=' d-flex align-items-right gap-1'*/>
                       <i className="ri-car-line"></i> List My Car {/* link to List My Car page */}
                       </Button>
                       <Button href="/login" color="inherit" /*className=' d-flex align-items-right gap-1'*/>
@@ -130,7 +130,7 @@ const Header = () => {
                       {/* <Button color="inherit" onClick={ () => logout()}>
                       <i className="ri-logout-circle-r-line"></i>Logout
                       </Button> */}
-                  </>
+                  </Box>
                 )} 
           </Col>
         </Row>

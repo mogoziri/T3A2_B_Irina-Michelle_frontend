@@ -1,15 +1,13 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Routers from '../../routers/routers';
+import Routes from '../../routers/routes';
 import { Fragment } from 'react';
 
 const Layout = () => {
   return <Fragment>
     < Header />
-    <div>
-      <Routers />
-    </div>
+      <Routes />
     <Footer />
   </Fragment>
 }

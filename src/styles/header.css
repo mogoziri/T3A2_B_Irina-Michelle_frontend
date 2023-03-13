@@ -11,25 +11,52 @@
     color: var(--primary2);
 }
 
-.header__top__left a {
+/* .header__top__left a {
    display: flex;
    column-gap: 0.2rem;
    text-decoration: none;
    color: var(--primary2);
    font-size: 1rem;
-}
+} */
 
-.header__top__left a:hover {
+/* .header__top__left a:hover {
     font-size: .9rem;
     color: var(--primary2);
+} */
+
+.logo h1 a span {
+  font-size:1.2rem;
 }
+
+.logo h1 a l {
+  font-style: 1.2em;
+}
+
+.logo h1 a {
+ text-decoration: none;
+ color: var(--primary2);
+ font-weight: 400;
+}
+
+.logo h1 {
+  line-height: 1.4rem;
+} 
+
+.logo-content {
+  color: var(--primary2);
+  margin-top: 15px;
+  line-height: 20px;
+  font-size: small;
+  font-weight: 300;
+}
+
 
 /* .header__top__right a {
   text-decoration: none;
   color: var(--primary2);
   font-size: 0.9rem;
-} */
-/* 
+} 
+
 .header__top__right a:hover{
   color: var(--primary2);
 } */

@@ -3,11 +3,13 @@ import {
     Box,
     Button,
     Alert,
+    Link,
     Container,
     Grid,
     TextField,
     Typography,
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import { useAuth } from "../../Authentication/auth-provider";
   
 const LogInForm = () => {
@@ -59,6 +61,14 @@ const LogInForm = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+            </Grid>
+          </Grid>
+
+          <Grid container justifyContent="flex-end">
+            <Grid item>
+              <Link to="/signup" component={RouterLink} variant="body2">
+                Or create a new account
+              </Link>
             </Grid>
           </Grid>
 

@@ -4,62 +4,64 @@ Button,
 Container,
 Alert,
 Grid,
-// Link,
 TextField,
 Typography,
 } from "@mui/material";
+import 'remixicon/fonts/remixicon.css';
+// import List-Img from '../../Assets/'
+
 import React, { useState } from "react";
-//   import { Link as RouterLink } from "react-router-dom";
 import useVehicle from "../../Hooks/useVehicleHook";
   
   const ListMyCarForm = () => {
     const { listVehicle, error } = useVehicle();
-    const [type, setType] = useState("");
-    const [owner_id, setOwnerId] = useState("");
     const [price_per_day, setPricePerDay] = useState("");
     const [location, setLocation] = useState("");
     const [availability, setAvailability] = useState("");
-    const [features, setFeatures,] = useState("");
+    const [transmission, setTransmission,] = useState("");
     const [picture_url, setPictureUrl,] = useState("");
 
     const handleSubmit = async (event) => {
       event.preventDefault();
-      listVehicle({ type, owner_id, price_per_day, location, availability, features, picture_url });
-    };return (
-      <Container component="main" maxWidth="xs">
+      listVehicle({ transmission, price_per_day, location, availability, picture_url });
+    };
+    
+    return (
+      <Container component="main" maxWidth="xs" marginTop="16">
         <Box
           sx={{
-          //   marginBottom: 20,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            marginBottom: 43,
+            // flexDirection: "column",
+            marginBottom: 45,
             marginTop: 10,
-  }
-          }
+          }}
         >
           <Typography variant="h6">List My Car</Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={handleSubmit} 
+            sx={{ 
+            mt: 3,
+          }}>
             <Grid container spacing={2}>
-              <Grid item xs={12}>
+              <Grid item xs={12} paddingBottom="20px" >
+              <i className="ri-roadster-line"></i>
                 <TextField
                   required
                   fullWidth
-                  id="type"
-                  label="type"
-                  name="type"
-                  autoComplete="type"
-                  value={type}
-                  onChange={(e) => setType(e.target.value)}
+                  id="transmission"
+                  label="Transmission"
+                  name="transmission"
+                  autoComplete="transmission"
+                  value={transmission}
+                  onChange={(e) => setTransmission(e.target.value)}
                 />
               </Grid>
             </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} paddingBottom="20px">
+              <i className="ri-money-dollar-circle-line"></i>
                 <TextField
                   required
                   fullWidth
                   name="price_per_day"
-                  label="price_per_day"
+                  label="Price Per Day"
                   type="price_per_day"
                   id="price_per_day"
                   autoComplete="price_per_day"
@@ -67,12 +69,13 @@ import useVehicle from "../../Hooks/useVehicleHook";
                   onChange={(e) => setPricePerDay(e.target.value)}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} paddingBottom="20px">
+              <span><i className="ri-map-pin-2-line"></i></span>
                 <TextField
                   required
                   fullWidth
                   name="location"
-                  label="location"
+                  label="Location"
                   type="location"
                   id="location"
                   autoComplete="location"
@@ -80,12 +83,13 @@ import useVehicle from "../../Hooks/useVehicleHook";
                   onChange={(e) => setLocation(e.target.value)}
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12}  paddingBottom="20px">
+              <i className="ri-calendar-2-line"></i>
                 <TextField
                   required
                   fullWidth
                   name="availability"
-                  label="availability"
+                  label="Availability"
                   type="availability"
                   id="availability"
                   autoComplete="availability"
@@ -93,25 +97,13 @@ import useVehicle from "../../Hooks/useVehicleHook";
                   onChange={(e) => setAvailability(e.target.value)}
                 />
               </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="features"
-                  label="features"
-                  type="features"
-                  id="features"
-                  autoComplete="features"
-                  value={features}
-                  onChange={(e) => setFeatures(e.target.value)}
-                />
-              </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} paddingBottom="20px">
+              <i className="ri-image-line"></i>
                 <TextField
                   required
                   fullWidth
                   name="picture_url"
-                  label="picture_url"
+                  label="Image URL"
                   type="picture_url"
                   id="picture_url"
                   autoComplete="picture_url"
@@ -134,9 +126,9 @@ import useVehicle from "../../Hooks/useVehicleHook";
               type="register"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 2, mb: 2, width: 150, height: 50}}
             >
-              List Car
+              Save Car
             </Button>
           </Box>
         </Box>

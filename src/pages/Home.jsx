@@ -1,16 +1,26 @@
-import React from "react";
-
+import React,  { useEffect, useState } from "react";
 import TopSlider from "../components/UI/TopSlider";
 import Helmet from "../components/Helmet/Helmet";
-
-
-import FindCarForm from "../components/UI/FindCarForm";
+import * as vehiclesApi from "../API/api-vehicles"
 import InfoSection from "../components/UI/InfoSection";
-
-
 import { Container, Col } from "reactstrap";
+import CarListings from "./CarListings";
 
-const Home = () => {
+const Home = () => { 
+  const [ vehicles, setVehicles ] = useState([])
+  const [ /*error*/ setError ] = useState("")
+
+  useEffect(() => {
+    vehiclesApi
+      .getAllVehicles()
+      .then(( data ) => {
+        setVehicles(data);
+      })
+      .catch(() => {
+        setError("There was an issue loading the Vehicles");
+      })
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <Helmet title="Home">
     {/* Top Slider section  */}
@@ -19,7 +29,7 @@ const Home = () => {
           <div className="top_form">
             <Container>
               <Col lg='8' md='8' sm='12'>
-                  <FindCarForm />
+                  {/* <FindCarForm /> */}
               </Col>
             </Container> 
           </div>
@@ -28,6 +38,8 @@ const Home = () => {
       <section className="p-0 info__section">
         <Container>
           <InfoSection />
+          {/* {!!error ? carlistings} */}
+          < CarListings vehicles={vehicles} />
         </Container>
       </section>
     </Helmet>
