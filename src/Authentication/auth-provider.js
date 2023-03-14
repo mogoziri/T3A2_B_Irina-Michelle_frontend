@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Cookies from 'js-cookie';
 import * as usersApi from "../API/api-users";
 
 
@@ -18,7 +17,6 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem("user-token");
-    Cookies.remove("accessToken");
     setUserId();
     setIsLoggedIn(false);
     navigate("/");
