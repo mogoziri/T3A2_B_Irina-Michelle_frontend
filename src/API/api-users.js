@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 
 const BASE_URL =
@@ -9,15 +8,12 @@ const BASE_URL =
 
 export const getCurrentUser = async () => {
   const token = localStorage.getItem("user-token");
- console.log(token)
-  if (token) {
-    Cookies.set("accessToken", `${token}`)
-    const response = await axios.get(`${BASE_URL}/users/profile`, {
-      withCredentials:true,
-    });
-    const { id } = jwt_decode(response.data);
 
-    return { isValid: true, userId: id };
+  if (token) {
+    const response = await axios.post(`${BASE_URL}/users/profile`, {token});
+    const { _id } = response.data;
+
+    return { isValid: true, userId: _id };
   }
 
   return { isValid: false };
