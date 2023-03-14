@@ -37,3 +37,11 @@
 /* .info_section-content {
     margin-bottom: 200px;
 } */
+
+.find__cars-left {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPHSlkc4ugrFn5k6EoFk4mWH4swcn8aTxLaw&usqp=CAU ");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 65px 35px;
+}

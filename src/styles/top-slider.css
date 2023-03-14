@@ -1,31 +1,31 @@
 :root {
     --primary1: #3a86ff;
     --primary2: #fff;
-    --primary3: #3a85ffb8;
+    --primary3: #3a85ff00;
     --primary4: #fb5607;
 }
 
 .slider__item {
     max-width: 100%;
-    height: 325px;
+    height: 225px;
 }
 
 .slider__item-01 {
-    background: linear-gradient(var(--primary3), var(--primary3)), url('../Assets/all-images/slider-img/slider-1.jpg');
+    background: url('../Assets/all-images/cars-img/Ferrari.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .slider__item-02 {
-    background: linear-gradient(var(--primary3), var(--primary3)), url('../Assets/all-images/slider-img/slider-2.jpg');
+    background: url('../Assets/all-images/cars-img/RR.png'); /*linear-gradient(var(--primary3), var(--primary3)),*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .slider__item-03 {
-    background: linear-gradient(var(--primary3), var(--primary3)), url('../Assets/all-images/slider-img/slider-3.jpg');
+    background: url('../Assets/all-images/cars-img/BMW.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,11 +41,11 @@
   
 }
 
-.slider__content h1 {
+/* .slider__content h1 {
     font-size: 1.5rem;
     font-weight: 600;
     
-} 
+}  */
 
 /* .reserve__btn {
     background: var(--primary2) !important;
@@ -63,7 +63,7 @@
     
 .slider__item {
     max-width: 100%;
-    height: 525px;
+    height: 625px;
 }
 
     /* .slider__content {

@@ -5,14 +5,15 @@ Container,
 Alert,
 Grid,
 TextField,
-Typography,
+// Typography,
 } from "@mui/material";
 import 'remixicon/fonts/remixicon.css';
-// import List-Img from '../../Assets'
-
+import '../../styles/info-section.css'; 
+import img10 from "../../Assets/all-images/cars-img/Toyota.png";
 import React, { useState } from "react";
 import useVehicle from "../../Hooks/useVehicleHook";
 import { useAuth } from "../../Authentication/auth-provider";
+// import { flexbox } from "@mui/system";
   
   const ListMyCarForm = () => {
     const { listVehicle, error } = useVehicle();
@@ -31,14 +32,18 @@ import { useAuth } from "../../Authentication/auth-provider";
     
     return (
       <Container component="main" maxWidth="xs" marginTop="16">
+        <img src={img10} alt="Toyota" className="w-100 mt-20px" />
         <Box
           sx={{
-            // flexDirection: "column",
+            // display: "flex",
+            // justifyContent: "right",
+            // // flexDirection: "column",
             marginBottom: 45,
             marginTop: 10,
           }}
         >
-          <Typography variant="h6">List My Car</Typography>
+          <h2>List My Car</h2>
+          <p>Have your car up on the Carental website instantly. List your car here:</p>
           <Box component="form" noValidate onSubmit={handleSubmit} 
             sx={{ 
             mt: 3,
@@ -50,7 +55,7 @@ import { useAuth } from "../../Authentication/auth-provider";
                   required
                   fullWidth
                   id="description"
-                  label="description"
+                  label="Description" 
                   name="description"
                   autoComplete="description"
                   value={description}
@@ -60,7 +65,7 @@ import { useAuth } from "../../Authentication/auth-provider";
             </Grid>
             <Grid container spacing={2}>
               <Grid item xs={12} paddingBottom="20px" >
-              <i className="ri-roadster-line"></i>
+              <i class="ri-settings-5-line"></i>
                 <TextField
                   required
                   fullWidth
