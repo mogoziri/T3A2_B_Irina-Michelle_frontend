@@ -8,22 +8,25 @@ TextField,
 Typography,
 } from "@mui/material";
 import 'remixicon/fonts/remixicon.css';
-// import List-Img from '../../Assets/'
+// import List-Img from '../../Assets'
 
 import React, { useState } from "react";
 import useVehicle from "../../Hooks/useVehicleHook";
+import { useAuth } from "../../Authentication/auth-provider";
   
   const ListMyCarForm = () => {
     const { listVehicle, error } = useVehicle();
+    const { userId } = useAuth();
     const [price_per_day, setPricePerDay] = useState("");
     const [location, setLocation] = useState("");
-    const [availability, setAvailability] = useState("");
-    const [transmission, setTransmission,] = useState("");
-    const [picture_url, setPictureUrl,] = useState("");
+    const [transmission, setTransmission] = useState("");
+    const [picture_url, setPictureUrl] = useState("");
+    const [description, setDescription] = useState("");
+    
 
     const handleSubmit = async (event) => {
       event.preventDefault();
-      listVehicle({ transmission, price_per_day, location, availability, picture_url });
+      listVehicle({ description, transmission, price_per_day: parseInt(price_per_day), location, availability: true, picture_url, owner_id : userId });
     };
     
     return (
@@ -40,6 +43,21 @@ import useVehicle from "../../Hooks/useVehicleHook";
             sx={{ 
             mt: 3,
           }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} paddingBottom="20px" >
+              <i className="ri-roadster-line"></i>
+                <TextField
+                  required
+                  fullWidth
+                  id="description"
+                  label="description"
+                  name="description"
+                  autoComplete="description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+              </Grid>
+            </Grid>
             <Grid container spacing={2}>
               <Grid item xs={12} paddingBottom="20px" >
               <i className="ri-roadster-line"></i>
@@ -81,20 +99,6 @@ import useVehicle from "../../Hooks/useVehicleHook";
                   autoComplete="location"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                />
-              </Grid>
-              <Grid item xs={12}  paddingBottom="20px">
-              <i className="ri-calendar-2-line"></i>
-                <TextField
-                  required
-                  fullWidth
-                  name="availability"
-                  label="Availability"
-                  type="availability"
-                  id="availability"
-                  autoComplete="availability"
-                  value={availability}
-                  onChange={(e) => setAvailability(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} paddingBottom="20px">
