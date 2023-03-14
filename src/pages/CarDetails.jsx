@@ -1,13 +1,29 @@
-import React from "react";
+import React,  { useEffect, useState } from "react";
 import Helmet from "../components/Helmet/Helmet";
-
-import carData from "../data/CarData";
-import CarItem from '../components/UI/CarItem';
+import { useParams } from "react-router-dom";
+import * as vehiclesApi from "../API/api-vehicles"
+import CarDetailedItem from '../components/UI/CarDetailedItem';
 
 import { Container, Row, Col } from "reactstrap";
 
 /* Needs to connect to Book Now Button on Car Listing Page*/ 
 const CarDetails = () => {
+    const [ vehicle, setVehicle ] = useState({})
+    const [ /*error*/ setError ] = useState("")
+    const { id } = useParams()
+    console.log(id)
+    useEffect(() => {
+        
+        vehiclesApi
+          .getVehicle(id)
+          .then(( data ) => {
+            setVehicle(data);
+          })
+          .catch(() => {
+            setError("There was an issue loading the Vehicles");
+          })
+      }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
     return (
     <Helmet title="Car Details">
 
@@ -16,15 +32,11 @@ const CarDetails = () => {
             <Container>
                 <Row>
                     <Col lg='12'className="text-center mb-5">
-                        <h6 className="section__subtitle">Car Details</h6>
-                        <h2 className="section__title">Car Info</h2>
+                        <h2 className="section__title">Car Details</h2> 
                     </Col>
-
-                    {
-                        carData.map(item => (
-                            <CarItem item={item} key={item.id} />
-                        ))
-                    }
+                </Row>
+                <Row>
+                    <CarDetailedItem carItem={vehicle} key={vehicle._id} />
                 </Row>
             </Container>
         </section>
