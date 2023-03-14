@@ -1,32 +1,28 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { useNavigate, /*useLocation*/ } from "react-router-dom";
 import * as vehiclesApi from "../API/api-vehicles"
 
 const useVehicle = () => {
-    // const [/*listVehicle,*/ setVehicle] = useState();
-    // const [/*user,*/ setUser] = useState();
-    // const [/*error,*/ setError] = useState();
-    // const [/*isLoggedIn,*/ setIsLoggedIn] = useState(false);
-    // const [/*loading,*/ setLoading] = useState(false);
-    // const [/*loadingInitial,*/ setLoadingInitial] = useState(true);
+    const [ error, setError] = useState();
     const navigate = useNavigate() 
 
-    const listVehicle = ({ type, owner_id, price_per_day, location, availability, features, picture_url }) => {
+    const listVehicle = ({ description, transmission, owner_id, price_per_day, location, availability, picture_url }) => {
       // setLoading(true);
   
       vehiclesApi
-        .listVehicle({ type, owner_id, price_per_day, location, availability, features, picture_url })
+        .listVehicle({ description, transmission, owner_id, price_per_day, location, availability, picture_url })
         .then(() => {
           navigate('/');
         })
-        .catch(() => {
-          // setError(error.response.data.data);    
+        .catch((error) => {
+          setError(error);    
         })
         // .finally(() => setLoading(false));
     };
 
     return {
-      listVehicle
+      listVehicle, 
+      error
     }
 }
 
