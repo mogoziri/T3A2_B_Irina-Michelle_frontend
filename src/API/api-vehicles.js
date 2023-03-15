@@ -40,14 +40,19 @@ export const updateVehicle = async ({ description, transmission, owner_id, vehic
 };
 
 export const getVehicle = async (id) => {
-  console.log(id)
   const response = await axios.get(`${BASE_URL}/vehicles/${id}`);
-  console.log(response)
+
   return response.data;
 }
 
 export const getAllVehicles = async () => {
   const response = await axios.get(`${BASE_URL}/vehicles`);
   
+  return response.data;
+}
+
+export const getVehiclesForOwner = async (ownerId) => {
+  const response = await axios.get(`${BASE_URL}/vehicles?owner_id=${ownerId}`);
+
   return response.data;
 }

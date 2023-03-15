@@ -9,8 +9,12 @@ const CarDetailedItem = ({ carItem } ) => {
 
   return <Col lg='12' className='md-5'>
         <div className="car__item">
-            <div className="car__img">
-                <img src={picture_url ? picture_url : "https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_675,q_auto:eco,w_800/465e6f8aa14ec68fd56685de98d1765a" } alt="Car" className='w-10'/>
+            <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+        }} className="car__img">
+                <img src={picture_url ? picture_url : "" } alt="Car" className='w-50'/>
             </div>
             
                 <div className="car__item-content mt-4">
@@ -20,16 +24,17 @@ const CarDetailedItem = ({ carItem } ) => {
 
                 <div className="car__item-info">
                     <span><i className="ri-file-list-line"></i>{description}</span>
-                    {/* <span className=" d-flex align-items-center gap-1"><i className="ri-star-line"></i>{rating}</span> */}
                     <span className=" d-flex align-items-center gap-1"><i className="ri-map-pin-2-line"></i>{location}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-settings-5-line"></i>{transmission}</span>
                 </div>
-                 <button className=" w-25 car__item-btn car__btn-rent">
+                <div style={{ display: "flex" }}>
+                 <button style={{marginRight: "auto" }} className=" w-25 car__item-btn car__btn-rent">
                     <Link to={`/reserve/${_id}`}>Confirm booking</Link>
                  </button>
-                 <button className=" w-25 car__item-btn car__btn-rent">
+                 <button style={{marginLeft: "auto" }} className=" w-25 car__item-btn car__btn-rent">
                     <Link to={`/`}>Back to search</Link>
                  </button>
+                 </div>
                 </div>
             </div> 
          </Col>  
