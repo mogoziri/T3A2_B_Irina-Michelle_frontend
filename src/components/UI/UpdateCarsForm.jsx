@@ -184,7 +184,7 @@ return (
             Update Car
         </Button>
 
-        <Button
+        {/* <Button
             color="error"
             type="register"
             fullWidth
@@ -192,7 +192,7 @@ return (
             sx={{ mt: 2, mb: 2, width: 150, height: 50}}
         >
             Delete Car
-        </Button>
+        </Button> */}
         </Box>
     </Box>
     </Container>
