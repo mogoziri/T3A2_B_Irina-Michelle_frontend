@@ -11,7 +11,6 @@ const CarDetails = () => {
     const [ vehicle, setVehicle ] = useState({})
     const [ /*error*/ setError ] = useState("")
     const { id } = useParams()
-    console.log(id)
     useEffect(() => {
         
         vehiclesApi
