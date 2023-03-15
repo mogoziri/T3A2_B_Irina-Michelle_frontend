@@ -22,6 +22,7 @@ const Header = () => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const userLinks = [
     { name: "Profile", path: `/users/profile/${uid}` },
+    { name: "My cars", path: `/my-cars` },
     { name: "Logout" },
   ];
 

@@ -6,6 +6,7 @@ import CarListings from "../pages/CarListings";
 import CarRatings from "../pages/CarRating";
 import ListMyCar from "../pages/ListMyCar";
 import LogIn from "../pages/LogIn";
+import MyCars from "../pages/MyCars";
 import OwnerBooking from "../pages/OwnerBookingref";
 import Profile from "../pages/Profile";
 import RateUser from "../pages/RateUser";
@@ -23,6 +24,7 @@ const Routers = () => {
         <Route path="/cars" element={<CarListings />} />
         <Route path="/cars/rating/:id" element={<CarRatings />} />
         <Route path="/list-my-car" element={<ListMyCar />} />
+        <Route path="/my-cars" element={isLoggedIn ? <MyCars /> : <Navigate replace to="/" /> } />
         <Route path="/login" element={isLoggedIn ? <Navigate replace to="/" /> : <LogIn />} /> {/*element={<LogIn />}*/}
         <Route path="/bookings" element={<OwnerBooking />} />
         <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate replace to="/" />} /> {/*element={<OwnerProfile />}*/}

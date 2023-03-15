@@ -33,3 +33,9 @@ export const getAllVehicles = async () => {
   
   return response.data;
 }
+
+export const getVehiclesForOwner = async (ownerId) => {
+  const response = await axios.get(`${BASE_URL}/vehicles?owner_id=${ownerId}`);
+
+  return response.data;
+}
