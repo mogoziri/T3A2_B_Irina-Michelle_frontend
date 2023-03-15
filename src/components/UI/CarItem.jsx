@@ -14,11 +14,11 @@ const CarItem = ({ carItem } ) => {
             </div>
             
                 <div className="car__item-content mt-4">
-                    <h6 className="rent__price text-center gap-1">{`${price_per_day}.00`}
-                    <span>/ Day</span></h6>
+                    <h6 className="rent__price text-center gap-1">{`$${price_per_day}.00`}
+                    <span> per day</span></h6>
 
                 <div className="car__item-info">
-                    <span><i className="ri-file-list-line"></i>{description}</span>
+                    <span className=" d-flex align-items-center gap-1"><i className="ri-file-list-line"></i>{description}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-star-line"></i>{rating}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-map-pin-2-line"></i>{location}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-settings-5-line"></i>{transmission}</span>

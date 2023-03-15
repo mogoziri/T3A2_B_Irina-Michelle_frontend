@@ -11,6 +11,10 @@
     padding-bottom: 15px; */
 }
 
+.section__description {
+    color: var(--primary2),
+}
+/* 
 .quick__link {
     border: none !important;
     background: transparent !important;
@@ -28,7 +32,7 @@
 
 .footer__link-title {
     color: var(--primary2);
-}
+} */
 
 .footer__bottom {
     color: var(--primary2);

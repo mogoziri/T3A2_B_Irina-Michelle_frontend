@@ -9,6 +9,7 @@
     border: 1px solid var(--primary3);
     padding: 20px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .car__item-info span i {
@@ -41,7 +42,7 @@
 } */
 
 .car__btn-rent {
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 4px 4px 4px;
 }
 
 .car__item-content h4 {

@@ -19,15 +19,20 @@
 
 
 /*pre-define css*/
-h1, 
+h1,
 h2, 
 h3, 
 h4, 
 h5, 
 h6 {
-  color: var(--primary1);
+  color: var(--primary4);
   font-weight: 600;
   margin-bottom: 0;
+}
+
+h2,
+h6 {
+  color: var(--primary1);
 }
 
 h3, 
@@ -38,6 +43,10 @@ h4 {
 h5, 
 h6 {
   font-size: 1.2rem;
+}
+
+p {
+  color: var(--primary1);
 }
 
 a{
@@ -73,7 +82,7 @@ ul {
  }
 
  section {
-  padding: 50px 0px 112px; /*Footer at bottom of page with 112px*/
+  padding: 50px 0px 10px; /*Footer at bottom of page with 112px*/
  }
 
  .btn {
