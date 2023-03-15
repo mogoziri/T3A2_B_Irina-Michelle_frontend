@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import '../../styles/car-item.css';
 
 const CarItem = ({ carItem } ) => {
-  const {_id, transmission, picture_url, rating, location, price_per_day, description} = carItem
+  const {_id, transmission, picture_url, location, price_per_day, description} = carItem
   
   return <Col lg='4' md='4' sm='6' className='md-5'>
         <div className="car__item">
@@ -19,7 +19,7 @@ const CarItem = ({ carItem } ) => {
 
                 <div className="car__item-info">
                     <span className=" d-flex align-items-center gap-1"><i className="ri-file-list-line"></i>{description}</span>
-                    <span className=" d-flex align-items-center gap-1"><i className="ri-star-line"></i>{rating}</span>
+                    {/* <span className=" d-flex align-items-center gap-1"><i className="ri-star-line"></i>{rating}</span> */}
                     <span className=" d-flex align-items-center gap-1"><i className="ri-map-pin-2-line"></i>{location}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-settings-5-line"></i>{transmission}</span>
                 </div>
