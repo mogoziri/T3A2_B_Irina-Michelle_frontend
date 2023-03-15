@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import '../../styles/car-item.css';
 
 const MyCar = ({ carItem } ) => {
-  const {_id, transmission, picture_url, location, price_per_day, description} = carItem
+  const { transmission, picture_url, location, price_per_day, description} = carItem
   
   return <Col lg='4' md='4' sm='6' className='md-5'>
         <div className="car__item">

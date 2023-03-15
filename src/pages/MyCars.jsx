@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../Authentication/auth-provider";
 import * as vehiclesApi from "../API/api-vehicles"
-import CarListings from "./CarListings";
 import MyCar from "../components/UI/MyCar"
 
 const MyCars = () => { 
