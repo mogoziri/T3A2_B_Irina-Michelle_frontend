@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import 'remixicon/fonts/remixicon.css';
 import '../../styles/info-section.css'; 
-import img10 from "../../Assets/all-images/cars-img/Toyota.png";
 import React, { useEffect, useState } from "react";
 import useVehicle from "../../Hooks/useVehicleHook";
 import { useAuth } from "../../Authentication/auth-provider";
@@ -48,7 +47,7 @@ const UpdateCarForm = () => {
           .catch(() => {
             setError("There was an issue loading the Vehicles");
           })
-      }, []); 
+      }, []); // eslint-disable-line react-hooks/exhaustive-deps
         
 
 const handleSubmit = async (event) => {
