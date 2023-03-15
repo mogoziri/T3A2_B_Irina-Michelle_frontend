@@ -50,7 +50,7 @@ const Header = () => {
           <Col lg='6' md='6' sm='6' >
           <div className="logo">
               <h1><Link to ='/' className='d-flex align-items-center gap-1'>
-              {/* <i className="ri-roadster-fill"></i> */}
+              <i className="ri-roadster-fill"></i>
                 <span>CARENTAL</span>
               </Link>
               </h1>

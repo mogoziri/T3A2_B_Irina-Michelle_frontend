@@ -36,11 +36,9 @@ const Home = () => {
       </section>
         {/* Info section */}
       <section className="p-0 info__section">
-        <Container>
           <InfoSection />
           {/* {!!error ? carlistings} */}
           < CarListings vehicles={vehicles} />
-        </Container>
       </section>
     </Helmet>
   );
