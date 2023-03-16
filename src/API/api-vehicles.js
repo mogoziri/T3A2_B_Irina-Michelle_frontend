@@ -56,3 +56,14 @@ export const getVehiclesForOwner = async (ownerId) => {
 
   return response.data;
 }
+
+export const createReservation = async(vehicle_id, renter_id) => {
+  const token = localStorage.getItem("user-token");
+  const response = await axios.post(`${BASE_URL}/vehicles/${vehicle_id}/reservation`, {
+    reserveFrom: new Date().toJSON(),
+    reserveTo: new Date().toJSON(),
+    token: token
+  });
+  console.log(response.data)
+  return response.data
+}
