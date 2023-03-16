@@ -14,7 +14,6 @@ import { useAuth } from "../../Authentication/auth-provider";
 
 const SignUpForm = () => {
   const { signUp, error } = useAuth();
-//   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   
@@ -22,18 +21,18 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     signUp({ username, password, displayName: username });
-  };return (
+  };
+  
+  return (
     <Container component="main" maxWidth="xs">
       <Box
         sx={{
-        //   marginBottom: 20,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           marginBottom: 43,
           marginTop: 10,
-}
-        }
+        }}
       >
         <Typography variant="h6">Sign Up</Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
