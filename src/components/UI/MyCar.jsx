@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import '../../styles/car-item.css';
 
 const MyCar = ({ carItem } ) => {
-  const { transmission, picture_url, location, price_per_day, description} = carItem
+  const { _id, transmission, picture_url, location, price_per_day, description} = carItem
   
   return <Col lg='4' md='4' sm='6' className='md-5'>
         <div className="car__item">
@@ -23,7 +23,7 @@ const MyCar = ({ carItem } ) => {
                     <span className=" d-flex align-items-center gap-1"><i className="ri-settings-5-line"></i>{transmission}</span>
                 </div>
                  <button className=" w-50 car__item-btn car__btn-rent">
-                    <Link to={``}>Update</Link>
+                    <Link to={`/cars/update/${_id}`}>Update</Link>
                     </button>
                 </div>
             </div> 

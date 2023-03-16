@@ -1,4 +1,4 @@
-
+import { Box, Button } from "@mui/material"
 import React from "react";
 import { Col }  from "reactstrap";
 import { Link } from "react-router-dom";
@@ -23,18 +23,33 @@ const CarDetailedItem = ({ carItem } ) => {
                     <span>/ Day</span></h6>
 
                 <div className="car__item-info">
-                    <span><i className="ri-file-list-line"></i>{description}</span>
+                <span className=" d-flex align-items-center gap-1"><i className="ri-file-list-line"></i>{description}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-map-pin-2-line"></i>{location}</span>
                     <span className=" d-flex align-items-center gap-1"><i className="ri-settings-5-line"></i>{transmission}</span>
                 </div>
-                <div style={{ display: "flex" }}>
-                 <button style={{marginRight: "auto" }} className=" w-25 car__item-btn car__btn-rent">
+                {/* <div style={{ display: "flex" }}> */}
+                <Box sx={{
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: 10,
+        marginTop: 5,
+
+        }}>
+                 <Button type="register"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 2, mb: 2, mr: 5, width: 150, height: 50}} className="car__item-btn car__btn-rent">
                     <Link to={`/reserve/${_id}`}>Confirm booking</Link>
-                 </button>
-                 <button style={{marginLeft: "auto" }} className=" w-25 car__item-btn car__btn-rent">
+                 </Button>
+
+                 <Button type="register"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 2, mb: 2, width: 150, height: 50}} className="car__item-btn car__btn-rent">
                     <Link to={`/`}>Back to search</Link>
-                 </button>
-                 </div>
+                 </Button>
+                 </Box>
+                 {/* </div> */}
                 </div>
             </div> 
          </Col>  
