@@ -21,13 +21,24 @@ const MyCars = () => {
 
     return (
         <section>
-        <h1>My cars</h1>
+        <h1 style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginBottom: 50,
+        }} >My cars</h1>
         {
               vehicles.map((item) => (
                 <MyCar carItem={item} key={item._id} /> 
               ))
             }
-        <h1>Reservations</h1>
+        <h1 style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginBottom: 20,
+            marginTop: 30,
+        }} >Reservations</h1>
         </section>
     );
 }
