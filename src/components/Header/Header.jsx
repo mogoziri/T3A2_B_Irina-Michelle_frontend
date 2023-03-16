@@ -18,7 +18,6 @@ const Header = () => {
   const { logout, isLoggedIn, user } = useAuth();
   const navigate = useNavigate();
   const username = user ? user.displayName : null;
-  const uid = user ? user.uid : null;
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const userLinks = [
     { name: "My bookings", path: `/bookings` },
