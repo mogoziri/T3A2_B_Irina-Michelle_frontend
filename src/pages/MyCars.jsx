@@ -52,7 +52,9 @@ const MyCars = () => {
             marginTop: 30,
         }} >Reservations</h1>
         {
-          reservations.map((item) => (console.log(item)))
+          reservations.filter((item) => (item.status === "created")).map((item) => (
+            <MyCar carItem={vehicles.find((vehicle) => vehicle._id === item.vehicle_id)} reservationItem={item} /> 
+          ))
         }
         </section>
     );
