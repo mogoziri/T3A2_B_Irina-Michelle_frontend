@@ -6,6 +6,7 @@ import MyCar from "../components/UI/MyCar"
 const MyCars = () => { 
     const { userId } = useAuth();
     const [ vehicles, setVehicles ] = useState([])
+    const [ reservations, setReservations ] = useState([])
     const [ /*error*/ setError ] = useState("")
 
     useEffect(() => {
@@ -18,6 +19,17 @@ const MyCars = () => {
             setError("There was an issue loading the Vehicles");
           })
       }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    useEffect(() => {
+      vehiclesApi
+        .getOwnerReservations(userId)
+        .then(( data ) => {
+          setReservations(data);
+        })
+        .catch(() => {
+          setError("There was an issue loading the Reservations");
+        })
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <section>
@@ -39,6 +51,11 @@ const MyCars = () => {
             marginBottom: 20,
             marginTop: 30,
         }} >Reservations</h1>
+        {
+          reservations.filter((item) => (item.status === "created")).map((item) => (
+            <MyCar carItem={vehicles.find((vehicle) => vehicle._id === item.vehicle_id)} reservationItem={item} /> 
+          ))
+        }
         </section>
     );
 }
