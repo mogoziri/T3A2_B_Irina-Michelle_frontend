@@ -1,13 +1,54 @@
 import { Box, Button } from "@mui/material"
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import { Col }  from "reactstrap";
 import { Link } from "react-router-dom";
 import '../../styles/car-item.css';
+import { useAuth } from "../../Authentication/auth-provider";
+import * as vehiclesApi from "../../API/api-vehicles"
 
-const CarDetailedItem = ({ carItem } ) => {
-  const {_id, transmission, picture_url, location, price_per_day, description} = carItem
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+const CarDetailedItem = ({ carItem } ) => {  
+  const { userId } = useAuth();
+  const {_id, transmission, picture_url, location, price_per_day, description, owner_id} = carItem
+  const [visible, setVisible] = useState(true)
+  const [modalIsOpen, setIsOpen] = useState(false)
+
+  const handleBookingClick = async () => {
+    console.log(owner_id)
+    setVisible(false)
+    setIsOpen(true)
+    await vehiclesApi.createReservation(_id, userId)
+  };
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
 
   return <Col lg='12' className='md-5'>
+
+    <Modal
+        isOpen={modalIsOpen}
+        //onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        ariaHideApp={false}
+        contentLabel="Example Modal"
+      >    
+      <h2>Thanks! Your booking is being processed</h2>
+      <button onClick={closeModal}>close</button>
+    </Modal>  
         <div className="car__item">
             <div style={{
             display: 'flex',
@@ -35,14 +76,14 @@ const CarDetailedItem = ({ carItem } ) => {
         marginTop: 5,
 
         }}>
-                 <Button type="register"
+                 {visible && <Button type="confirm"
             fullWidth
             variant="contained"
-            sx={{ mt: 2, mb: 2, mr: 5, width: 150, height: 50}} className="car__item-btn car__btn-rent">
-                    <Link to={`/reserve/${_id}`}>Confirm booking</Link>
-                 </Button>
+            sx={{ mt: 2, mb: 2, mr: 5, width: 150, height: 50}} className="car__item-btn car__btn-rent" onClick={handleBookingClick}>
+                    Confirm booking
+                 </Button>}
 
-                 <Button type="register"
+                 <Button type="back"
             fullWidth
             variant="contained"
             sx={{ mt: 2, mb: 2, width: 150, height: 50}} className="car__item-btn car__btn-rent">
