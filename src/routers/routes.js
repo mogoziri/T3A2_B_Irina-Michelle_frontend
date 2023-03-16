@@ -7,12 +7,11 @@ import CarListings from "../pages/CarListings";
 import ListMyCar from "../pages/ListMyCar";
 import LogIn from "../pages/LogIn";
 import MyCars from "../pages/MyCars";
-import OwnerBooking from "../pages/OwnerBookingref";
+import MyBookings from "../pages/MyBookings";
 import Profile from "../pages/Profile";
 // import RateUser from "../pages/RateUser";
 import SignUp from "../pages/SignUp";
 import UpdateCar from "../pages/UpdateCars"
-import UserBooking from "../pages/UserBookingRef";
 import { useAuth } from "../Authentication/auth-provider";
 
 const Routers = () => {
@@ -27,11 +26,10 @@ const Routers = () => {
         <Route path="/list-my-car" element={<ListMyCar />} /> 
         <Route path="/my-cars" element={isLoggedIn ? <MyCars /> : <Navigate replace to="/" /> } />
         <Route path="/login" element={isLoggedIn ? <Navigate replace to="/" /> : <LogIn />} /> {/*element={<LogIn />}*/}
-        <Route path="/bookings" element={<OwnerBooking />} />
+        <Route path="/bookings" element={isLoggedIn ? <MyBookings /> : <Navigate replace to="/" /> } />
         <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate replace to="/" />} /> {/*element={<OwnerProfile />}*/}
         {/* <Route path="/profile/:id" element={<RateUser />} /> */}
         <Route path="/signup" element={isLoggedIn ? <Navigate replace to="/" /> : <SignUp />}  /> {/*element={<SignUp />*/}
-        <Route path="/bookings/:id" element={<UserBooking />} />
         <Route path="/cars/update/:id" element={<UpdateCar />} /> 
         {/* <Route path="/profile/:slug" element={<UserProfile />} /> */}
         </Routes>

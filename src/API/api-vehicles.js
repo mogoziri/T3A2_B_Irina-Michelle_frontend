@@ -73,3 +73,10 @@ export const getOwnerReservations = async(ownerId) => {
   
   return response.data
 }
+
+
+export const getRenterReservations = async(renterId) => {
+  const response = await axios.get(`${BASE_URL}/users/${renterId}/reservations`);
+  
+  return response.data
+}
