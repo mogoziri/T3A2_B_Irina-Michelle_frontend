@@ -17,12 +17,12 @@ const InfoSection = () => {
                 cost-effective, and environmentally friendly.</p>
                 <div className="info__section-item">
                     <p className="section-blurb">
-                        <i className="ri-roadster-fill"></i> <Link className="quick__link" to="/CarListings"> Rent a Car</Link>
+                        <i className="ri-roadster-fill"></i> <Link className="quick__link" to="/signup"> Rent a Car</Link>
                     </p>
                 </div>
                 <div className="info__section-item">
                     <p className="section-blurb">
-                        <i className="ri-roadster-line"></i> <Link className="quick__link" to="/list-my-car"> List My Car</Link>
+                        <i className="ri-roadster-line"></i> <Link className="quick__link" to="/signup"> List My Car</Link>
                     </p>
                 </div>
             </div>
