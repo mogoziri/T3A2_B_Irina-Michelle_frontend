@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row } from "reactstrap";
 import { useAuth } from "../Authentication/auth-provider";
 import * as vehiclesApi from "../API/api-vehicles"
 import MyBooking from "../components/UI/MyBooking"
@@ -22,6 +23,8 @@ const MyBookings = () => {
 
       return (
         <section>
+            <Container>
+                <Row>
         <h1 style={{
             display: 'flex',
             flexDirection: 'column',
@@ -30,10 +33,12 @@ const MyBookings = () => {
             marginTop: 30,
         }} >My bookings</h1>
         {
-          reservations.filter((item) => (item.status === "created")).map((item) => (
+          reservations.filter((item) => (item.status !== "created")).map((item) => (
             <MyBooking reservationItem={item} /> 
           ))
         }
+        </Row>
+        </Container>
         </section>
     );      
 }

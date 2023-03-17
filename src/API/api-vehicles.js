@@ -66,7 +66,17 @@ export const createReservation = async(vehicle_id, renter_id) => {
   });
 
   return response.data
-}  
+}
+
+export const updateReservationStatus = async (reservation_id, status) => {
+  const token = localStorage.getItem("user-token");
+  const response = await axios.put(`${BASE_URL}/vehicles/reservation/${reservation_id}`, {
+    status: status,
+    token: token
+  });
+
+  return response.data
+}
 
 export const getOwnerReservations = async(ownerId) => {
   const response = await axios.get(`${BASE_URL}/users/owner/${ownerId}/reservations`);
