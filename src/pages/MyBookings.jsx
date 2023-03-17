@@ -33,7 +33,7 @@ const MyBookings = () => {
             marginTop: 30,
         }} >My bookings</h1>
         {
-          reservations.filter((item) => (item.status === "created")).map((item) => (
+          reservations.filter((item) => (item.status !== "created")).map((item) => (
             <MyBooking reservationItem={item} /> 
           ))
         }

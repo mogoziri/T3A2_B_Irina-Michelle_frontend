@@ -2,7 +2,8 @@ import { Box, Button } from "@mui/material"
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Col }  from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import '../../styles/car-item.css';
 import { useAuth } from "../../Authentication/auth-provider";
 import * as vehiclesApi from "../../API/api-vehicles"
@@ -19,13 +20,16 @@ const customStyles = {
   };
 
 const CarDetailedItem = ({ carItem } ) => {  
-  const { userId } = useAuth();
-  const {_id, transmission, picture_url, location, price_per_day, description, owner_id} = carItem
+  const { userId, isLoggedIn } = useAuth();
+  const {_id, transmission, picture_url, location, price_per_day, description } = carItem
   const [visible, setVisible] = useState(true)
   const [modalIsOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
 
   const handleBookingClick = async () => {
-    console.log(owner_id)
+    if (!isLoggedIn) {
+      return navigate("/signup");
+    }
     setVisible(false)
     setIsOpen(true)
     await vehiclesApi.createReservation(_id, userId)
