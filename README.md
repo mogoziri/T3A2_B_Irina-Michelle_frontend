@@ -1,3 +1,45 @@
+### Libraries for Front End:
+
+    "@emotion/react": "^11.10.6" - JavaScript CSS styles may be written with the library Emotion.
+
+    "@emotion/styled": "^11.10.6" - components may be created using the styled method to have styles applied to them.
+
+    "@mui/material": "^5.11.12" -  adaptable and accessible library of React components is offered by MUI such as buttons, etc.
+
+    "@testing-library/jest-dom": "^5.16.5" - is an add-on library for Testing Library that gives Jest users the ability to create their own DOM element matchers
+
+    "@testing-library/react": "^13.4.0" -  light-weight solution for testing React components.
+
+    "@testing-library/user-event": "^13.5.0" - is an addition to Testing Library that offers a more sophisticated simulation of browser interactions than the built-in fireEvent function
+
+    "axios": "^1.3.4" -A promise-based HTTP Client for the browser and node.js
+
+    "bootstrap": "^5.2.3" - A free and open-source CSS framework designed for front-end web development that prioritizes mobile responsiveness.
+
+    "js-cookie": "^3.0.1" - A lightweight JavaScript API for handling cookies in a simple way.
+
+    "jwt-decode": "^3.1.2" - A simple browser library which aids in the decoding of Base64Url encoded JWT tokens.
+
+    "react": "^18.2.0" - a front-end JavaScript toolkit that is free and open-source for creating user interfaces using components
+
+    "react-dom": "^18.2.0" - offers DOM-specific functions that may be used at your app's top level and as a way to leave the React model if necessary
+
+    "react-modal": "^3.16.1" - an accessible modal dialog component for React.JS
+
+    "react-router-dom": "^6.8.1" - is a client and server-side routeing framework for React with all the features.
+
+    "react-scripts": "5.0.1" - this includes scripts and configuration used by Create React App
+
+    "react-slick": "^0.29.0" - Carousel component built with React
+
+    "reactstrap": "^9.1.6" - does not need to utilise or include Bootstrap's JavaScript, and automatically exports all the necessary Bootstrap classes
+
+    "remixicon": "^2.5.0" - is a collection of carefully created system symbols in an open source neutral style for designers and developers. The icons can all be used without cost
+
+    "slick-carousel": "^1.8.1" - A slideshow feature that functions like a carousel to cycle among components, such as photographs or text slides
+
+    "web-vitals": "^2.1.4" - based on actual usage statistics, indicates how well your pages perform
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
