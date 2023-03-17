@@ -35,8 +35,9 @@ describe("ListMyCarForm", () => {
     render(<ListMyCarForm />, {
       wrapper: BrowserRouter,
     });
-});
+  });  
 
+  it("list", () => {
     const descriptionEl = screen.getByLabelText("Description *");
     const transmissionEl = screen.getByLabelText("Transmission *");
     const price_per_dayEl = screen.getByLabelText("Price Per Day *");
@@ -61,7 +62,7 @@ describe("ListMyCarForm", () => {
         availability: true,
     });
   });
-
+});
 //   it("renders Error message", () => {
 //     mockErrorMessage = "User already exists";
 //     render(<ListMyCarForm />, {
