@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Container, Row } from "reactstrap";
 import { useAuth } from "../Authentication/auth-provider";
 import * as vehiclesApi from "../API/api-vehicles"
 import MyBooking from "../components/UI/MyBooking"
@@ -22,6 +23,8 @@ const MyBookings = () => {
 
       return (
         <section>
+            <Container>
+                <Row>
         <h1 style={{
             display: 'flex',
             flexDirection: 'column',
@@ -34,6 +37,8 @@ const MyBookings = () => {
             <MyBooking reservationItem={item} /> 
           ))
         }
+        </Row>
+        </Container>
         </section>
     );      
 }

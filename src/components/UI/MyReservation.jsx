@@ -4,8 +4,8 @@ import { Col }  from "reactstrap";
 import { Link } from "react-router-dom";
 import '../../styles/car-item.css';
 
-const MyCar = ({ carItem } ) => {
-  const { _id, transmission, picture_url, location, price_per_day, description} = carItem
+const MyReservation = ({ carItem } ) => {
+  const { transmission, picture_url, location, price_per_day, description} = carItem
   
   return <Col lg='4' md='4' sm='6' className='md-5'>
         <div className="car__item">
@@ -30,11 +30,19 @@ const MyCar = ({ carItem } ) => {
         marginTop: 5,
 
         }}>
-                 <Button type="update"
+                <Button type="confirm"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 2, mb: 2, mr: 5, width: 150, height: 50}} className="car__item-btn car__btn-rent">
+                    Confirm booking
+                 </Button>
+
+                 <Button type="decline"
+                 color="error"
             fullWidth
             variant="contained"
             sx={{ mt: 2, mb: 2, width: 150, height: 50}} className="car__item-btn car__btn-rent">
-                    <Link to={`/cars/update/${_id}`}>Update</Link>
+                    <Link to={`/`}>Decline booking</Link>
                  </Button>
                  </Box>
                 </div>
@@ -43,4 +51,4 @@ const MyCar = ({ carItem } ) => {
 }
 
 
-export default MyCar
+export default MyReservation

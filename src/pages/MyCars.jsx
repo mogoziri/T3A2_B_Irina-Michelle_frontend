@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useAuth } from "../Authentication/auth-provider";
 import * as vehiclesApi from "../API/api-vehicles"
 import MyCar from "../components/UI/MyCar"
+import MyReservation from "../components/UI/MyReservation"
+
+import { Container, Row } from "reactstrap";
+
+
 
 const MyCars = () => { 
     const { userId } = useAuth();
@@ -33,6 +38,8 @@ const MyCars = () => {
 
     return (
         <section>
+        <Container>
+          <Row>
         <h1 style={{
             display: 'flex',
             flexDirection: 'column',
@@ -44,6 +51,8 @@ const MyCars = () => {
                 <MyCar carItem={item} key={item._id} /> 
               ))
             }
+            </Row>
+            <Row>
         <h1 style={{
             display: 'flex',
             flexDirection: 'column',
@@ -53,9 +62,11 @@ const MyCars = () => {
         }} >Reservations</h1>
         {
           reservations.filter((item) => (item.status === "created")).map((item) => (
-            <MyCar carItem={vehicles.find((vehicle) => vehicle._id === item.vehicle_id)} reservationItem={item} /> 
+            <MyReservation carItem={vehicles.find((vehicle) => vehicle._id === item.vehicle_id)} reservationItem={item} /> 
           ))
         }
+        </Row>
+        </Container>
         </section>
     );
 }
