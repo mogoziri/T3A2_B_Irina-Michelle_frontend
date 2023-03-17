@@ -11,7 +11,14 @@ const mockListMyCar = jest.fn();
 jest.mock("axios", () => jest.fn(() => Promise.resolve()));
 jest.mock("../../Authentication/auth-provider", () => ({
   useAuth: () => ({
-    user_id: mockListMyCar , 
+    userId: "id", 
+    // error: mockErrorMessage,
+  }),
+}));
+
+jest.mock("../../API/api-vehicles", () => ({
+  useVehicle: () => ({
+    listVehicle: mockListMyCar, 
     // error: mockErrorMessage,
   }),
 }));
@@ -35,7 +42,6 @@ describe("ListMyCarForm", () => {
     render(<ListMyCarForm />, {
       wrapper: BrowserRouter,
     });
-});
 
     const descriptionEl = screen.getByLabelText("Description *");
     const transmissionEl = screen.getByLabelText("Transmission *");
@@ -61,6 +67,8 @@ describe("ListMyCarForm", () => {
         availability: true,
     });
   });
+});
+
 
 //   it("renders Error message", () => {
 //     mockErrorMessage = "User already exists";
