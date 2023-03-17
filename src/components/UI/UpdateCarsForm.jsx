@@ -8,15 +8,13 @@ import {
     MenuItem,
     InputLabel,
     Select,
-    // Typography,
 } from "@mui/material";
 import 'remixicon/fonts/remixicon.css';
 import '../../styles/info-section.css'; 
 import React, { useEffect, useState } from "react";
-import useVehicle from "../../Hooks/useVehicleHook";
+import { useVehicle } from "../../Hooks/useVehicleHook";
 import { useAuth } from "../../Authentication/auth-provider";
 import { useParams } from "react-router-dom";
-    // import { flexbox } from "@mui/system";
 import * as vehiclesApi from "../../API/api-vehicles"
 
 const UpdateCarForm = () => {

@@ -6,13 +6,17 @@ import ListMyCarForm from "./ListMyCarForm";
 import axios from "axios"; // eslint-disable-line no-unused-vars
 
 const mockListMyCar = jest.fn();
-// let mockErrorMessage = "";
 
 jest.mock("axios", () => jest.fn(() => Promise.resolve()));
 jest.mock("../../Authentication/auth-provider", () => ({
   useAuth: () => ({
-    user_id: mockListMyCar , 
-    // error: mockErrorMessage,
+    userId: "id", 
+  }),
+}));
+
+jest.mock("../../Hooks/useVehicleHook", () => ({
+  useVehicle: () => ({
+    listVehicle: mockListMyCar, 
   }),
 }));
 
@@ -35,7 +39,6 @@ describe("ListMyCarForm", () => {
     render(<ListMyCarForm />, {
       wrapper: BrowserRouter,
     });
-});
 
     const descriptionEl = screen.getByLabelText("Description *");
     const transmissionEl = screen.getByLabelText("Transmission *");
@@ -55,19 +58,10 @@ describe("ListMyCarForm", () => {
         owner_id: "id",
         description: "Jeep",
         transmission: "auto",
-        price_per_day: 120,
+        price_per_day: 100,
         location: "Sydney",
         picture_url: "https://car.com",
         availability: true,
     });
   });
-
-//   it("renders Error message", () => {
-//     mockErrorMessage = "User already exists";
-//     render(<ListMyCarForm />, {
-//       wrapper: BrowserRouter,
-//     });
-
-//     expect(screen.getByText(mockErrorMessage)).toBeInTheDocument();
-//   });
-// 
+});

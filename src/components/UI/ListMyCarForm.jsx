@@ -5,15 +5,13 @@ Container,
 Alert,
 Grid,
 TextField,
-// Typography,
 } from "@mui/material";
 import 'remixicon/fonts/remixicon.css';
 import '../../styles/info-section.css'; 
 import img10 from "../../Assets/all-images/cars-img/Toyota.png";
 import React, { useState } from "react";
-import useVehicle from "../../Hooks/useVehicleHook";
+import { useVehicle } from "../../Hooks/useVehicleHook";
 import { useAuth } from "../../Authentication/auth-provider";
-// import { flexbox } from "@mui/system";
   
   const ListMyCarForm = () => {
     const { listVehicle, error } = useVehicle();
@@ -35,9 +33,6 @@ import { useAuth } from "../../Authentication/auth-provider";
         <img src={img10} alt="Toyota" className="w-100 mt-20px" />
         <Box
           sx={{
-            // display: "flex",
-            // justifyContent: "right",
-            // // flexDirection: "column",
             marginBottom: 45,
             marginTop: 10,
           }}
@@ -132,7 +127,7 @@ import { useAuth } from "../../Authentication/auth-provider";
             </Grid> */}
   
             <Button
-              type="register"
+              type="register" 
               fullWidth
               variant="contained"
               sx={{ mt: 2, mb: 2, width: 150, height: 50}}
