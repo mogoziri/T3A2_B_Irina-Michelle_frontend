@@ -10,7 +10,9 @@ export const getCurrentUser = async () => {
   const token = localStorage.getItem("user-token");
 
   if (token) {
-    const response = await axios.post(`${BASE_URL}/users/profile`, { token });
+    const response = await axios.get(`${BASE_URL}/users/profile`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
     const { _id } = response.data;
 
     return { isValid: true, userId: _id };

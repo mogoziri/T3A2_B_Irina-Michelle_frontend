@@ -15,16 +15,19 @@ export const listVehicle = async ({
   picture_url,
 }) => {
   const token = localStorage.getItem("user-token");
-  const response = await axios.post(`${BASE_URL}/vehicles`, {
-    /*from server.js file BE*/ description,
-    transmission,
-    owner_id,
-    price_per_day,
-    location,
-    availability,
-    picture_url,
-    token,
-  });
+  const response = await axios.post(
+    `${BASE_URL}/vehicles`,
+    {
+      /*from server.js file BE*/ description,
+      transmission,
+      owner_id,
+      price_per_day,
+      location,
+      availability,
+      picture_url,
+    },
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
 
   return response.data;
 };
@@ -40,16 +43,19 @@ export const updateVehicle = async ({
   picture_url,
 }) => {
   const token = localStorage.getItem("user-token");
-  const response = await axios.put(`${BASE_URL}/vehicles/${vehicle_id}`, {
-    /*from server.js file BE*/ description,
-    transmission,
-    owner_id,
-    price_per_day,
-    location,
-    availability,
-    picture_url,
-    token,
-  });
+  const response = await axios.put(
+    `${BASE_URL}/vehicles/${vehicle_id}`,
+    {
+      /*from server.js file BE*/ description,
+      transmission,
+      owner_id,
+      price_per_day,
+      location,
+      availability,
+      picture_url,
+    },
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
 
   return response.data;
 };
@@ -79,8 +85,8 @@ export const createReservation = async (vehicle_id, renter_id) => {
     {
       reserveFrom: new Date().toJSON(),
       reserveTo: new Date().toJSON(),
-      token: token,
-    }
+    },
+    { headers: { Authorization: `Bearer ${token}` } }
   );
 
   return response.data;
@@ -92,24 +98,28 @@ export const updateReservationStatus = async (reservation_id, status) => {
     `${BASE_URL}/vehicles/reservation/${reservation_id}`,
     {
       status: status,
-      token: token,
-    }
+    },
+    { headers: { Authorization: `Bearer ${token}` } }
   );
 
   return response.data;
 };
 
 export const getOwnerReservations = async (ownerId) => {
+  const token = localStorage.getItem("user-token");
   const response = await axios.get(
-    `${BASE_URL}/users/owner/${ownerId}/reservations`
+    `${BASE_URL}/users/owner/${ownerId}/reservations`,
+    { headers: { Authorization: `Bearer ${token}` } }
   );
 
   return response.data;
 };
 
 export const getRenterReservations = async (renterId) => {
+  const token = localStorage.getItem("user-token");
   const response = await axios.get(
-    `${BASE_URL}/users/${renterId}/reservations`
+    `${BASE_URL}/users/${renterId}/reservations`,
+    { headers: { Authorization: `Bearer ${token}` } }
   );
 
   return response.data;

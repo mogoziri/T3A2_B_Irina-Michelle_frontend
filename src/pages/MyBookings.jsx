@@ -38,7 +38,7 @@ const MyBookings = () => {
           {reservations
             .filter((item) => item.status !== "created")
             .map((item) => (
-              <MyBooking reservationItem={item} />
+              <MyBooking reservationItem={item} key={item._id} />
             ))}
         </Row>
       </Container>

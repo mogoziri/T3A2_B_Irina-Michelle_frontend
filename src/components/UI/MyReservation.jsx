@@ -6,7 +6,7 @@ import * as vehiclesApi from "../../API/api-vehicles";
 
 const MyReservation = ({ carItem, reservationItem }) => {
   const { transmission, picture_url, location, price_per_day, description } =
-    carItem;
+    carItem || {};
   const { _id } = reservationItem;
   const [visible, setVisible] = useState(true);
 
