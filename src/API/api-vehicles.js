@@ -25,7 +25,6 @@ export const listVehicle = async ({
     picture_url,
     token,
   });
-  console.log(response);
 
   return response.data;
 };
@@ -51,7 +50,6 @@ export const updateVehicle = async ({
     picture_url,
     token,
   });
-  console.log(response);
 
   return response.data;
 };

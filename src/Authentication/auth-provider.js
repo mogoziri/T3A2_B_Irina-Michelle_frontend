@@ -52,7 +52,6 @@ export const AuthProvider = ({ children }) => {
         navigate("/");
       })
       .catch((error) => {
-        // console.log({error})
         setError(
           error.response.data.data
         ); /*where do I find this? in front end?*/

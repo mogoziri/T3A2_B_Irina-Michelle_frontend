@@ -27,7 +27,6 @@ const UpdateCarForm = () => {
   const [transmission, setTransmission] = useState("");
   const [picture_url, setPictureUrl] = useState("");
   const [availability, setAvailability] = useState("");
-  console.log(useParams());
 
   useEffect(() => {
     vehiclesApi
