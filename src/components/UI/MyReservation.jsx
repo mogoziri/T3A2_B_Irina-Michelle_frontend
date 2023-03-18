@@ -7,8 +7,10 @@ import * as vehiclesApi from "../../API/api-vehicles";
 const MyReservation = ({ carItem, reservationItem }) => {
   const { transmission, picture_url, location, price_per_day, description } =
     carItem || {};
+  const { reserve_from } = reservationItem || {};
   const { _id } = reservationItem;
   const [visible, setVisible] = useState(true);
+  const dateFromString = new Date(reserve_from).toDateString();
 
   const handleConfirmClick = async () => {
     vehiclesApi
@@ -43,6 +45,10 @@ const MyReservation = ({ carItem, reservationItem }) => {
             <span className=" d-flex align-items-center gap-1">
               <i className="ri-file-list-line"></i>
               {description}
+            </span>
+            <span className=" d-flex align-items-center gap-1">
+              <i class="ri-calendar-event-line"></i>
+              {dateFromString}
             </span>
             <span className=" d-flex align-items-center gap-1">
               <i className="ri-map-pin-2-line"></i>
