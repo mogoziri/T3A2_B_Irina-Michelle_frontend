@@ -29,7 +29,7 @@ const ListMyCarForm = () => {
   };
 
   return (
-    <Container component="main" maxWidth="xs" marginTop="16">
+    <Container component="main" maxWidth="xs">
       <img src={img10} alt="Toyota" className="w-100 mt-20px" />
       <Box
         sx={{
@@ -67,7 +67,7 @@ const ListMyCarForm = () => {
           </Grid>
           <Grid container spacing={2}>
             <Grid item xs={12} paddingBottom="20px">
-              <i class="ri-settings-5-line"></i>
+              <i className="ri-settings-5-line"></i>
               <TextField
                 required
                 fullWidth
@@ -126,14 +126,6 @@ const ListMyCarForm = () => {
           </Grid>
 
           {!!error && <Alert severity="error">{error}</Alert>}
-
-          {/* <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link to="/profile" component={RouterLink} variant="body2">
-                  Already Listed This Car? Go To My Profile
-                </Link>
-              </Grid>
-            </Grid> */}
 
           <Button
             type="register"

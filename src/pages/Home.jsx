@@ -37,7 +37,6 @@ const Home = () => {
       {/* Info section */}
       <section className="p-0 info__section">
         <InfoSection />
-        {/* {!!error ? carlistings} */}
         <CarListings vehicles={vehicles} />
       </section>
     </Helmet>

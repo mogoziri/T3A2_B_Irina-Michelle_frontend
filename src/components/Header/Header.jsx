@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, Row, Col } from "reactstrap";
-import { Link /*NavLink*/ } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/header.css";
 import { Button, Box } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
@@ -59,20 +59,6 @@ const Header = () => {
             </Col>
 
             <Col lg="6" md="6" sm="6">
-              {/* <div className="header__top__right d-flex align-items-center justify-content-end gap-2">
-            <Link to='/SignUp' className=" d-flex align-items-center gap-1" >
-            <i className="ri-user-line"></i> Sign Up </Link>  */}
-              {/* link to Sign Up page */}
-
-              {/* <Link to='/ListMyCar'className=" d-flex align-items-center gap-1">
-            <i className="ri-car-line"></i> List My Car </Link> */}
-              {/* link to List My Car page */}
-
-              {/* <Link to='LogIn'className=" d-flex align-items-center gap-1"> 
-            <i className="ri-login-box-line"></i> Log In </Link> */}
-              {/* link to Log In page */}
-              {/* </div> */}
-
               {isLoggedIn ? (
                 <Box display="flex" justifyContent="end">
                   <Button href="/list-my-car" color="inherit">
@@ -80,7 +66,6 @@ const Header = () => {
                     {/* link to List My Car page */}
                   </Button>
                   <Tooltip title="Open userProfile">
-                    {/* <Tooltip title="Open userLinks">  */}
                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                       <Avatar
                         alt={username}
@@ -117,31 +102,21 @@ const Header = () => {
                 </Box>
               ) : (
                 <Box display="flex" justifyContent="end">
-                  {/* <div className="header__top__right"></div> */}
-                  <Button
-                    href="/signup"
-                    color="inherit" /*className=' d-flex align-items-right gap-1'*/
-                  >
+                  <Button href="/signup" color="inherit">
                     <i className="ri-user-line"></i>Sign Up{" "}
                     {/* link to Sign Up page */}
                   </Button>
                   <Button
                     href={isLoggedIn ? "/list-my-car" : "/signup"}
-                    color="inherit" /*className=' d-flex align-items-right gap-1'*/
+                    color="inherit"
                   >
                     <i className="ri-car-line"></i> List My Car{" "}
                     {/* link to List My Car page */}
                   </Button>
-                  <Button
-                    href="/login"
-                    color="inherit" /*className=' d-flex align-items-right gap-1'*/
-                  >
+                  <Button href="/login" color="inherit">
                     <i className="ri-login-box-line"></i>Login{" "}
                     {/* link to Log In page */}
                   </Button>
-                  {/* <Button color="inherit" onClick={ () => logout()}>
-                      <i className="ri-logout-circle-r-line"></i>Logout
-                      </Button> */}
                 </Box>
               )}
             </Col>

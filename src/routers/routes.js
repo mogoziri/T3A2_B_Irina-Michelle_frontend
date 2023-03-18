@@ -7,7 +7,6 @@ import ListMyCar from "../pages/ListMyCar";
 import LogIn from "../pages/LogIn";
 import MyCars from "../pages/MyCars";
 import MyBookings from "../pages/MyBookings";
-import Profile from "../pages/Profile";
 import SignUp from "../pages/SignUp";
 import UpdateCar from "../pages/UpdateCars";
 import { useAuth } from "../Authentication/auth-provider";
@@ -35,10 +34,6 @@ const Routers = () => {
       <Route
         path="/bookings"
         element={isLoggedIn ? <MyBookings /> : <Navigate replace to="/" />}
-      />
-      <Route
-        path="/profile"
-        element={isLoggedIn ? <Profile /> : <Navigate replace to="/" />}
       />
       <Route
         path="/signup"
