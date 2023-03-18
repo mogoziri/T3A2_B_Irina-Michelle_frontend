@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import * as usersApi from "../API/api-users";
 
-
 const AuthContext = React.createContext({});
 
 export const AuthProvider = ({ children }) => {
@@ -45,7 +44,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
 
     usersApi
-      .signUp({ username, password})
+      .signUp({ username, password })
       .then(({ id, token }) => {
         setUserId(id);
         setIsLoggedIn(true);
@@ -54,7 +53,9 @@ export const AuthProvider = ({ children }) => {
       })
       .catch((error) => {
         // console.log({error})
-        setError(error.response.data.data); /*where do I find this? in front end?*/      
+        setError(
+          error.response.data.data
+        ); /*where do I find this? in front end?*/
       })
       .finally(() => setLoading(false));
   };
@@ -77,7 +78,7 @@ export const AuthProvider = ({ children }) => {
       })
       .finally(() => setLoading(false));
   };
-   
+
   const memoedValue = useMemo(
     () => ({
       userId,

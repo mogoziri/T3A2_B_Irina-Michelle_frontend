@@ -1,14 +1,14 @@
 :root {
-    --primary1: #3a86ff;
-    --primary2: #fff;
-    --primary3: #3a85ffb8;
-    --primary4: #fb5607;
+  --primary1: #3a86ff;
+  --primary2: #fff;
+  --primary3: #3a85ffb8;
+  --primary4: #fb5607;
 }
 
 .header_top {
-    padding: 10px 0px;
-    background: var(--primary1);
-    color: var(--primary2);
+  padding: 10px 0px;
+  background: var(--primary1);
+  color: var(--primary2);
 }
 
 /* .header__top__left a {
@@ -25,7 +25,7 @@
 } */
 
 .logo h1 a span {
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
 .logo h1 a l {
@@ -33,14 +33,14 @@
 }
 
 .logo h1 a {
- text-decoration: none;
- color: var(--primary2);
- font-weight: 400;
+  text-decoration: none;
+  color: var(--primary2);
+  font-weight: 400;
 }
 
 .logo h1 {
   line-height: 1.4rem;
-} 
+}
 
 .logo-content {
   color: var(--primary2);
@@ -49,7 +49,6 @@
   font-size: small;
   font-weight: 300;
 }
-
 
 /* .header__top__right a {
   text-decoration: none;
@@ -66,4 +65,3 @@
     justify-content: center;
     flex: wrap;
 } */
-

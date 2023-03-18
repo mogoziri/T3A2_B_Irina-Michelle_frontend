@@ -25,10 +25,10 @@ describe("LogInForm", () => {
     });
 
     expect(screen.getByRole("button")).toHaveTextContent("Submit");
-    expect(screen.getByRole("heading")).toHaveTextContent("Welcome Back! Login Here");
-    expect(
-      screen.getByText("Or create a new account")
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading")).toHaveTextContent(
+      "Welcome Back! Login Here"
+    );
+    expect(screen.getByText("Or create a new account")).toBeInTheDocument();
   });
 
   it("submits username and password when button is pressed", () => {

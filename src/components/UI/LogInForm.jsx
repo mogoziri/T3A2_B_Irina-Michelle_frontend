@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import {
-    Box,
-    Button,
-    Alert,
-    Link,
-    Container,
-    Grid,
-    TextField,
-    Typography,
+  Box,
+  Button,
+  Alert,
+  Link,
+  Container,
+  Grid,
+  TextField,
+  Typography,
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth } from "../../Authentication/auth-provider";
-  
+
 const LogInForm = () => {
   const { logIn, error } = useAuth();
   const [username, setUsername] = useState("");
@@ -21,7 +21,7 @@ const LogInForm = () => {
     event.preventDefault();
     logIn({ username, password });
   };
-    
+
   return (
     <Container component="main" maxWidth="xs">
       <Box
@@ -78,11 +78,10 @@ const LogInForm = () => {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Submit 
+            Submit
           </Button>
 
           {!!error && <Alert severity="error">{error}</Alert>}
-          
         </Box>
       </Box>
     </Container>
