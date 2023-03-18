@@ -1,4 +1,4 @@
-### Libraries for Front End:
+### Front End Libraries:
 
 |      Library      |                  Description                 |
 |:-----------------:|:--------------------------------------------:|
@@ -17,7 +17,7 @@
 | react-router-dom | Is a client and server-side routeing framework for React with all the features. |
 | react-scripts | Includes scripts and configuration used by Create React App |
 | react-slick | Carousel component built with React |
-| reactstrap | does not need to utilise or include Bootstrap's JavaScript, and automatically exports all the necessary Bootstrap classes |
+| reactstrap | Does not need to utilise or include Bootstrap's JavaScript, and automatically exports all the necessary Bootstrap classes |
 | remixicon | Collection of carefully created system symbols in an open source neutral style for designers and developers. The icons can all be used without cost |
 | slick-carousel | A slideshow feature that functions like a carousel to cycle among components, such as photographs or text slides |
 | web-vitals | Based on actual usage statistics, indicates how well your pages perform |
