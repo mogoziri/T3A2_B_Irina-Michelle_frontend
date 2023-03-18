@@ -36,11 +36,6 @@
   color: var(--primary2);
 }
 
-/* .car__btn-details {
-    background: var(primary4);
-    border-radius: 0px 4px 4px 0px;
-} */
-
 .car__btn-rent {
   border-radius: 4px 4px 4px 4px;
   margin-top: 8px;

@@ -35,38 +35,6 @@
   padding-right: 15px;
 }
 
-/* .select__group {
-    width: 100%;
-}
-
-.select__group select {
-    width: 100%;
-    padding: 9.2px 15px;
-    border: 1px solid black;
-    outline: none;
-    color: #7c8a97;
-}
-
-.top__slider-section {
-    position: relative;
-    z-index: 10;
-    margin-bottom: 200px;
-} */
-
-/* .top_form {
-    position: absolute;
-    bottom: -150px;
-    z-index: 11;
-    width: 100%;
-} */
-
-/*do we need this form row*/
-.form__row {
-  background: var(--primary2);
-  box-shadow: 5px 5px 15px -5px #7c8a97;
-}
-/*-----------------------------------------*/
-
 .username::before {
   content: "Username";
   margin-right: 0.8rem;
@@ -82,7 +50,7 @@
 .log__in-btn {
   background: var(--primary1);
   color: var(--primary2);
-  padding: 1px 15px; /* 8px 15px*/
+  padding: 1px 15px;
   width: 100%;
   border: none;
   outline: none;
