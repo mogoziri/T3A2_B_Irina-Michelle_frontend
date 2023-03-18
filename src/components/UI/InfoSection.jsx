@@ -31,7 +31,7 @@ const InfoSection = () => {
           <div className="info__section-item">
             <p className="section-blurb">
               <i className="ri-roadster-line"></i>{" "}
-              <Link className="quick__link" to="/signup">
+              <Link className="quick__link" to="/list-my-car">
                 {" "}
                 List My Car
               </Link>

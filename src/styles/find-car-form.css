@@ -53,11 +53,11 @@
   position: relative;
   z-index: 10;
   margin-bottom: 100px;
-} 
+}
 
 .top_form {
   position: absolute;
-  bottom: -150px; 
+  bottom: -150px;
   width: 100%;
 }
 
@@ -82,7 +82,7 @@
 .find__car-btn {
   background: var(--primary1);
   color: var(--primary2);
-  padding: 5px 15px; 
+  padding: 5px 15px;
   width: 35%;
   border: none;
   outline: none;

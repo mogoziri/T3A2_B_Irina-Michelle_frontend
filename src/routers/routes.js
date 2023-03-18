@@ -20,7 +20,10 @@ const Routers = () => {
       <Route path="/" element={<Home />} />
       <Route path="/cars/:id" element={<CarDetails />} />
       <Route path="/cars" element={<CarListings />} />
-      <Route path="/list-my-car" element={<ListMyCar />} />
+      <Route
+        path="/list-my-car"
+        element={isLoggedIn ? <ListMyCar /> : <SignUp />}
+      />
       <Route
         path="/my-cars"
         element={isLoggedIn ? <MyCars /> : <Navigate replace to="/" />}
@@ -41,7 +44,10 @@ const Routers = () => {
         path="/signup"
         element={isLoggedIn ? <Navigate replace to="/" /> : <SignUp />}
       />
-      <Route path="/cars/update/:id" element={<UpdateCar />} />
+      <Route
+        path="/cars/update/:id"
+        element={isLoggedIn ? <UpdateCar /> : <LogIn />}
+      />
     </Routes>
   );
 };
