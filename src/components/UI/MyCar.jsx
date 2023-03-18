@@ -12,7 +12,7 @@ const MyCar = ({ carItem }) => {
     location,
     price_per_day,
     description,
-  } = carItem;
+  } = carItem || {};
 
   return (
     <Col lg="4" md="4" sm="6" className="md-5">
