@@ -2,8 +2,6 @@
 
 |           Library           |                                                                     Description                                                                     |
 | :-------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------: |
-|       @emotion/react        |                                            JavaScript CSS styles may be written with the library Emotion                                            |
-|       @emotion/styled       |                                  Components may be created using the styled method to have styles applied to them                                   |
 |        @mui/material        |                             Adaptable and accessible library of React components is offered by MUI such as buttons, etc                             |
 |  @testing-library/jest-dom  |                    Add-on library for Testing Library that gives Jest users the ability to create their own DOM element matchers                    |
 |   @testing-library/react    |                                                 Light-weight solution for testing React components.                                                 |
