@@ -7,32 +7,11 @@
 
 .footer {
   background: var(--primary1);
-  /* padding-top: 50px;
-    padding-bottom: 15px; */
 }
 
 .section__description {
   color: var(--primary2);
 }
-/* 
-.quick__link {
-    border: none !important;
-    background: transparent !important;
-}
-
-.quick__link a {
-    color: var(--primary2);
-    text-decoration: none;
-    transition: .3s;
-}
-
-.quick__link a:hover {
-    color: var(--primary4);
-}
-
-.footer__link-title {
-    color: var(--primary2);
-} */
 
 .footer__bottom {
   color: var(--primary2);
@@ -47,24 +26,3 @@
   padding-top: 10px;
   padding-bottom: 0;
 }
-
-/*/if needed for search */
-/* .search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px;
-    border: 1px solid;
-}
-
-.search input {
-    background: transparent;
-    color: #fff;
-    border: none;
-    outline: none;
-}
-
-.search span i {
-    color: #fff;
-    
-} */

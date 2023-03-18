@@ -7,12 +7,7 @@
 
 .section__subtitle {
   color: var(--primary4);
-  /* text-align: center; */
 }
-
-/* .section__blurb {
-    text-align: center;  
-} */
 
 .info__section-item {
   column-gap: 3rem;
@@ -21,7 +16,6 @@
 .info__section-item p {
   color: var(--primary1);
   font-size: 1.1rem;
-  /* text-align: center; */
 }
 
 .info__section-item p i {
@@ -34,42 +28,8 @@
   text-decoration: none;
 }
 
-/* .info_section-content {
-    margin-bottom: 200px;
-} */
-
-/* .find__cars-left {
-    background: url("https://media.istockphoto.com/id/1167559642/photo/modern-blue-coupe-sports-car-in-showroom.jpg?s=612x612&w=0&k=20&c=Tqid-aBP0oLJ4rLrnIrxabejDk74dWFEmeLeRbsFg6I=");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 280px;
-    height: 100%;
-} */
-
 .middle__home {
-  /* display: flex;
-    justify-content:center; */
   background-color: var(--primary3);
   padding-bottom: 60px;
   padding-left: 10px;
 }
-/* 
-@media screen and (min-width: 1200px) {
-
-    .find__cars-left {
-        background: url("https://media.istockphoto.com/id/1167559642/photo/modern-blue-coupe-sports-car-in-showroom.jpg?s=612x612&w=0&k=20&c=Tqid-aBP0oLJ4rLrnIrxabejDk74dWFEmeLeRbsFg6I=");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 280px;
-        height: 100%;
-    }
-
-    .middle__home {
-        display: flex;
-        justify-content: space-evenly;
-        background-color: var(--primary3);
-        padding-bottom: 100px;
-    } 
-} */
