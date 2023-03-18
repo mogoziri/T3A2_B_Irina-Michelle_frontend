@@ -16,8 +16,6 @@
 
     "bootstrap": "^5.2.3" - A free and open-source CSS framework designed for front-end web development that prioritizes mobile responsiveness.
 
-    "js-cookie": "^3.0.1" - A lightweight JavaScript API for handling cookies in a simple way.
-
     "jwt-decode": "^3.1.2" - A simple browser library which aids in the decoding of Base64Url encoded JWT tokens.
 
     "react": "^18.2.0" - a front-end JavaScript toolkit that is free and open-source for creating user interfaces using components
