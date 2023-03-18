@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { Container, Row, Col, /*ListGroup, ListGroupItem*/ } from 'reactstrap';
+import { Container, Row, Col /*ListGroup, ListGroupItem*/ } from "reactstrap";
 /*import { Link } from 'react-router-dom';*/
-import '../../styles/footer.css';
+import "../../styles/footer.css";
 // import { toBeInTheDOM } from '@testing-library/jest-dom/dist/matchers';
 
 // const quickLinks = [
@@ -10,63 +10,62 @@ import '../../styles/footer.css';
 //               path:"/home",
 //               display: "Home"
 //             },
-            // {
-            //   path:"/cars",
-            //   display: "Car Details"
-            // },
-            // {
-            //   path:"/cars",
-            //   display: "Car Listings"
-            // },
-            // {
-            //   path:"/cars",
-            //   display: "Car Rating"
-            // },
-            // {
-            //   path:"/cars",
-            //   display: "List My Car"
-            // },
-            // {
-            //   path:"/log_in",
-            //   display: "Log In"
-            // },
-            // {
-            //   path:"/bookings",
-            //   display: "Owner Booking Ref"
-            // },
-            // {
-            //   path:"/profile",
-            //   display: "Owner Profile"
-            // },
-            // {
-            //   path:"/profile: slug",
-            //   display: "Rate User"
-            // },
-            // {
-            //   path:"/sign_up",
-            //   display: "Sign Up"
-            // },
-            // {
-            //   path:"/bookings: slug",
-            //   display: "User Booking Ref"
-            // },
-            // {
-            //   path:"/profile: slug",
-            //   display: "User Profile"
-            // },
-          
+// {
+//   path:"/cars",
+//   display: "Car Details"
+// },
+// {
+//   path:"/cars",
+//   display: "Car Listings"
+// },
+// {
+//   path:"/cars",
+//   display: "Car Rating"
+// },
+// {
+//   path:"/cars",
+//   display: "List My Car"
+// },
+// {
+//   path:"/log_in",
+//   display: "Log In"
+// },
+// {
+//   path:"/bookings",
+//   display: "Owner Booking Ref"
+// },
+// {
+//   path:"/profile",
+//   display: "Owner Profile"
+// },
+// {
+//   path:"/profile: slug",
+//   display: "Rate User"
+// },
+// {
+//   path:"/sign_up",
+//   display: "Sign Up"
+// },
+// {
+//   path:"/bookings: slug",
+//   display: "User Booking Ref"
+// },
+// {
+//   path:"/profile: slug",
+//   display: "User Profile"
+// },
+
 // ]
 
 const Footer = () => {
-
-  const date = new Date()
-  const year = date.getFullYear()
+  const date = new Date();
+  const year = date.getFullYear();
 
   return (
-     <footer className="footer">
-    <Container>
-      <Row>
-        {/* <Col lg='2' md='4' sm='12' >
+    <footer className="footer">
+      <Container>
+        <Row>
+          {/* <Col lg='2' md='4' sm='12' >
         <div className="logo footer__logo">
               <h1><Link to ='/home' className='d-flex align-items-center gap-1'>
               <i className="ri-roadster-fill"></i>
@@ -79,7 +78,7 @@ const Footer = () => {
             </p>
         </Col> */}
 
-        {/* <Col lg='4' md='4' sm='6'>
+          {/* <Col lg='4' md='4' sm='6'>
           <div className="md-4">
             <h5 className="footer__link-title"> Quick Links </h5>
             <ListGroup>
@@ -94,17 +93,18 @@ const Footer = () => {
           </div>
         </Col> */}
 
-        <Col lg='12'>
-          <div className="footer__bottom">
-            <p className='section__description d-flex align-items-center justify-content-center gap-1 pt-4'>
-            <i className="ri-copyright-line"></i> Copyright {year}, by Carental.
-            </p>
-          </div>
-        </Col>
+          <Col lg="12">
+            <div className="footer__bottom">
+              <p className="section__description d-flex align-items-center justify-content-center gap-1 pt-4">
+                <i className="ri-copyright-line"></i> Copyright {year}, by
+                Carental.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
+  );
+};
 
-      </Row>
-    </Container>
-  </footer>
-)};
-
-export default Footer
+export default Footer;

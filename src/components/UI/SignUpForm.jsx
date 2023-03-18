@@ -16,13 +16,12 @@ const SignUpForm = () => {
   const { signUp, error } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     signUp({ username, password, displayName: username });
   };
-  
+
   return (
     <Container component="main" maxWidth="xs">
       <Box

@@ -10,13 +10,13 @@ const mockListMyCar = jest.fn();
 jest.mock("axios", () => jest.fn(() => Promise.resolve()));
 jest.mock("../../Authentication/auth-provider", () => ({
   useAuth: () => ({
-    userId: "id", 
+    userId: "id",
   }),
 }));
 
 jest.mock("../../Hooks/useVehicleHook", () => ({
   useVehicle: () => ({
-    listVehicle: mockListMyCar, 
+    listVehicle: mockListMyCar,
   }),
 }));
 
@@ -30,7 +30,9 @@ describe("ListMyCarForm", () => {
 
     expect(screen.getByRole("heading")).toHaveTextContent("List My Car");
     expect(
-      screen.getByText("Have your car up on the Carental website instantly. List your car here:")
+      screen.getByText(
+        "Have your car up on the Carental website instantly. List your car here:"
+      )
     ).toBeInTheDocument();
     expect(screen.getByRole("button")).toHaveTextContent("Save Car");
   });
@@ -45,23 +47,23 @@ describe("ListMyCarForm", () => {
     const price_per_dayEl = screen.getByLabelText("Price Per Day *");
     const locationEl = screen.getByLabelText("Location *");
     const picture_urlEl = screen.getByLabelText("Image URL *");
-    const submitButton = screen.getByRole("button"); 
+    const submitButton = screen.getByRole("button");
 
-    userEvent.type(descriptionEl,"Jeep");
-    userEvent.type(transmissionEl,"auto");
-    userEvent.type(price_per_dayEl,"100");
-    userEvent.type(locationEl,"Sydney");
-    userEvent.type(picture_urlEl,"https://car.com");
+    userEvent.type(descriptionEl, "Jeep");
+    userEvent.type(transmissionEl, "auto");
+    userEvent.type(price_per_dayEl, "100");
+    userEvent.type(locationEl, "Sydney");
+    userEvent.type(picture_urlEl, "https://car.com");
     userEvent.click(submitButton);
 
     expect(mockListMyCar).toHaveBeenCalledWith({
-        owner_id: "id",
-        description: "Jeep",
-        transmission: "auto",
-        price_per_day: 100,
-        location: "Sydney",
-        picture_url: "https://car.com",
-        availability: true,
+      owner_id: "id",
+      description: "Jeep",
+      transmission: "auto",
+      price_per_day: 100,
+      location: "Sydney",
+      picture_url: "https://car.com",
+      availability: true,
     });
   });
 });

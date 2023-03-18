@@ -1,13 +1,13 @@
 :root {
-    --primary1: #3a86ff;
-    --primary2: #fff;
-    --primary3: #3a85ffb8;
-    --primary4: #fb5607;
+  --primary1: #3a86ff;
+  --primary2: #fff;
+  --primary3: #3a85ffb8;
+  --primary4: #fb5607;
 }
 
 .section__subtitle {
-    color: var(--primary4);
-    /* text-align: center; */
+  color: var(--primary4);
+  /* text-align: center; */
 }
 
 /* .section__blurb {
@@ -15,23 +15,23 @@
 } */
 
 .info__section-item {
-    column-gap: 3rem;
+  column-gap: 3rem;
 }
 
 .info__section-item p {
-    color: var(--primary1);
-    font-size: 1.1rem;
-    /* text-align: center; */
-} 
+  color: var(--primary1);
+  font-size: 1.1rem;
+  /* text-align: center; */
+}
 
 .info__section-item p i {
-    color: var(--primary4);
-    font-size: 1.1rem;
-    align-items: center;
+  color: var(--primary4);
+  font-size: 1.1rem;
+  align-items: center;
 }
 
 .quick__link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* .info_section-content {
@@ -48,12 +48,12 @@
 } */
 
 .middle__home {
-    /* display: flex;
+  /* display: flex;
     justify-content:center; */
-    background-color: var(--primary3);
-    padding-bottom: 60px;
-    padding-left: 10px;
-} 
+  background-color: var(--primary3);
+  padding-bottom: 60px;
+  padding-left: 10px;
+}
 /* 
 @media screen and (min-width: 1200px) {
 

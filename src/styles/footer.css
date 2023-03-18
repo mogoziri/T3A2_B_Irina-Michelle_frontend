@@ -1,18 +1,18 @@
 :root {
-    --primary1: #3a86ff;
-    --primary2: #fff;
-    --primary3: #3a86ff41;
-    --primary4: #fb5607;
+  --primary1: #3a86ff;
+  --primary2: #fff;
+  --primary3: #3a86ff41;
+  --primary4: #fb5607;
 }
 
 .footer {
-    background: var(--primary1);
-    /* padding-top: 50px;
+  background: var(--primary1);
+  /* padding-top: 50px;
     padding-bottom: 15px; */
 }
 
 .section__description {
-    color: var(--primary2),
+  color: var(--primary2);
 }
 /* 
 .quick__link {
@@ -35,18 +35,17 @@
 } */
 
 .footer__bottom {
-    color: var(--primary2);
-    border-top: 10px solid var(--primary1);
-
+  color: var(--primary2);
+  border-top: 10px solid var(--primary1);
 }
 
 .section__description {
-    display:flex;
-    align-items: center;
-    justify-content: center; 
-    gap: 1;
-    padding-top: 10px;
-    padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1;
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 /*/if needed for search */
@@ -69,4 +68,3 @@
     color: #fff;
     
 } */
-

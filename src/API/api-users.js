@@ -10,7 +10,7 @@ export const getCurrentUser = async () => {
   const token = localStorage.getItem("user-token");
 
   if (token) {
-    const response = await axios.post(`${BASE_URL}/users/profile`, {token});
+    const response = await axios.post(`${BASE_URL}/users/profile`, { token });
     const { _id } = response.data;
 
     return { isValid: true, userId: _id };
@@ -35,6 +35,6 @@ export const logIn = async ({ username, password }) => {
     password,
   });
   const { id } = jwt_decode(response.data);
-  
+
   return { id, token: response.data };
 };

@@ -1,38 +1,38 @@
 :root {
-    --primary1: #3a86ff;
-    --primary2: #fff;
-    --primary3: #3a86ff41;
-    --primary4: #fb5607;
+  --primary1: #3a86ff;
+  --primary2: #fff;
+  --primary3: #3a86ff41;
+  --primary4: #fb5607;
 }
 
 .form__group-log-title h2 {
-    font-weight: 600;
-    font-size: 1.8rem;
-    color:var(--primary4);
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--primary4);
 }
 
 .form__group {
-    width: 100%;
-    margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .form__group input {
-    bottom: 1px solid var(--primary3);
-    padding: 8px 12px;
-    width: 100%;
-    outline:none;
+  bottom: 1px solid var(--primary3);
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
 }
 
 .form__group input::placeholder {
-    color: #7c8a97;
+  color: #7c8a97;
 }
 
 .form {
-    background: transparent;
-    padding-top: 55px;
-    padding-bottom: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+  background: transparent;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* .select__group {
@@ -62,33 +62,33 @@
 
 /*do we need this form row*/
 .form__row {
-    background: var(--primary2);
-    box-shadow: 5px 5px 15px -5px #7c8a97;
-} 
+  background: var(--primary2);
+  box-shadow: 5px 5px 15px -5px #7c8a97;
+}
 /*-----------------------------------------*/
 
 .username::before {
-   content: "Username";
-   margin-right: 0.8rem;
-   color: #7c8a97;
+  content: "Username";
+  margin-right: 0.8rem;
+  color: #7c8a97;
 }
 
 .password::before {
-    content: "Password";
-    margin-right: 0.8rem;
-    color: #7c8a97;
- }
+  content: "Password";
+  margin-right: 0.8rem;
+  color: #7c8a97;
+}
 
 .log__in-btn {
-   background: var(--primary1);
-   color: var(--primary2);
-   padding: 1px 15px; /* 8px 15px*/
-   width: 100%;
-   border: none;
-   outline: none;
+  background: var(--primary1);
+  color: var(--primary2);
+  padding: 1px 15px; /* 8px 15px*/
+  width: 100%;
+  border: none;
+  outline: none;
 }
 
 .log__in-btn:hover {
-    background: var(--primary3);
-    color: var(--primary1);
+  background: var(--primary3);
+  color: var(--primary1);
 }

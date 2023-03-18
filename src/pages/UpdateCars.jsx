@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import UpdateCarsForm from "../components/UI/UpdateCarsForm";
 
 const UpdateCars = () => {
   return (
-  <>
-  <UpdateCarsForm />
-  </>
-  )
-}
+    <>
+      <UpdateCarsForm />
+    </>
+  );
+};
 
-export default UpdateCars
+export default UpdateCars;
