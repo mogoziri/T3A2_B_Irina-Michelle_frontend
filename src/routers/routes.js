@@ -28,7 +28,7 @@ const Routers = () => {
       <Route
         path="/login"
         element={isLoggedIn ? <Navigate replace to="/" /> : <LogIn />}
-      />{" "}
+      />
       <Route
         path="/bookings"
         element={isLoggedIn ? <MyBookings /> : <Navigate replace to="/" />}
@@ -36,11 +36,11 @@ const Routers = () => {
       <Route
         path="/profile"
         element={isLoggedIn ? <Profile /> : <Navigate replace to="/" />}
-      />{" "}
+      />
       <Route
         path="/signup"
         element={isLoggedIn ? <Navigate replace to="/" /> : <SignUp />}
-      />{" "}
+      />
       <Route path="/cars/update/:id" element={<UpdateCar />} />
     </Routes>
   );
