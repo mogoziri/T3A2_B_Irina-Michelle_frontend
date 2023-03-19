@@ -97,7 +97,6 @@ const UpdateCarForm = () => {
   };
 
   const handleChange = (event) => {
-    console.log(event.target);
     setAvailability(event.target.value === true ? true : false);
   };
 
