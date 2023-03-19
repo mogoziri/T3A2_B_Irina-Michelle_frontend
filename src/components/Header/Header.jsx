@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/header.css";
@@ -13,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Authentication/auth-provider";
 
+//Create Header/Nav bar component. (Authentication required for List My Car must be logged in to access this and to make a reservation)
 const Header = () => {
   const { logout, isLoggedIn, user } = useAuth();
   const navigate = useNavigate();

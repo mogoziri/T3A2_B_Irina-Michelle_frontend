@@ -29,7 +29,7 @@ export const signUp = async ({ username, password }) => {
     username,
     password,
   });
-  const { id } = jwt_decode(response.data); //decode cookie to receive the id associated with the user.
+  const { id } = jwt_decode(response.data); //decode JWT to receive the id associated with the user.
 
   return { id, token: response.data };//user has now signed up and can now access bookings and add cars to database.
 };
@@ -40,7 +40,7 @@ export const logIn = async ({ username, password }) => {
     username,
     password,
   });
-  const { id } = jwt_decode(response.data); //decode cookie to receive the id associated with the user.
+  const { id } = jwt_decode(response.data); //decode JWT to receive the id associated with the user.
 
   return { id, token: response.data }; //user is logged in and can now access bookings and add cars to database.
 };

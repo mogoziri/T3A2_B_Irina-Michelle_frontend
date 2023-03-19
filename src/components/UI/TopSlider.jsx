@@ -6,10 +6,11 @@ import { Container } from "reactstrap";
 
 import "../../styles/top-slider.css";
 
+//images in Top Slider are displayed just under header. Set to switch between 3 images ever 3 secs.
 const TopSlider = () => {
   const settings = {
     fade: true,
-    speed: 2000,
+    speed: 3000,
     autoplayspeed: 3000,
     infinite: true,
     autoplay: true,
@@ -25,10 +26,6 @@ const TopSlider = () => {
             <h1 className="top_slider_subtitle text-light mb-3 mt-5">
               Browse Cars Below....
             </h1>
-            {/* <h4 className="top_slider_title text-light mb-4 mt-15">Carental</h4> */}
-            {/* <button className="btn reserve__btn mt-4">
-                <Link to="/cars">Reserve Now</Link>
-            </button> */}
           </div>
         </Container>
       </div>
@@ -39,12 +36,6 @@ const TopSlider = () => {
             <h1 className="top_slider_subtitle text-light mb-3 mt-5">
               Browse Cars Below....
             </h1>
-            {/* <h4 className="text-light mb-3 mt-5"> Browse Cars Below ...</h4>
-            <h1 className="text-light mb-4"> BOOK NOW!</h1> */}
-
-            {/* <button className="btn reserve__btn mt-4">
-                <Link to="/cars">Reserve Now</Link>
-            </button> */}
           </div>
         </Container>
       </div>
@@ -55,12 +46,6 @@ const TopSlider = () => {
             <h1 className="top_slider_subtitle text-light mb-3 mt-5">
               Browse Cars Below....
             </h1>
-            {/* <h4 className="text-light mb-3 mt-5"> Browse Cars Below ...</h4>
-            <h1 className="text-light mb-4"> BOOK NOW!</h1> */}
-
-            {/* <button className="btn reserve__btn mt-4">
-                <Link to="/cars">Reserve Now</Link>
-            </button> */}
           </div>
         </Container>
       </div>

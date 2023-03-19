@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { useVehicle } from "../../Hooks/useVehicleHook";
 import { useAuth } from "../../Authentication/auth-provider";
 
+//List My Car form. User must be logged in to access this component.
 const ListMyCarForm = () => {
   const { listVehicle, error } = useVehicle();
   const { userId } = useAuth();
@@ -28,6 +29,7 @@ const ListMyCarForm = () => {
     });
   };
 
+  //User to fill in the fields of the form and select save car button to add car to DB/ website (All fields are required to list a car)
   return (
     <Container component="main" maxWidth="xs">
       <img src={img10} alt="Toyota" className="w-100 mt-20px" />

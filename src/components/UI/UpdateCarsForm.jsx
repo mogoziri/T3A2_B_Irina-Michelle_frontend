@@ -17,6 +17,7 @@ import { useAuth } from "../../Authentication/auth-provider";
 import { useParams } from "react-router-dom";
 import * as vehiclesApi from "../../API/api-vehicles";
 
+//This component allows the user to update any or all fields of a car already listed/ saved in the DB
 const UpdateCarForm = () => {
   const { updateVehicle, error, setError } = useVehicle();
   const { id } = useParams(); /*added this*/
@@ -28,6 +29,7 @@ const UpdateCarForm = () => {
   const [picture_url, setPictureUrl] = useState("");
   const [availability, setAvailability] = useState("");
 
+  //a particular vehicle is retrieved for updating with the vehicle_id
   useEffect(() => {
     vehiclesApi
       .getVehicle(id)
@@ -62,13 +64,11 @@ const UpdateCarForm = () => {
     setAvailability(event.target.value === true ? true : false);
   };
 
+  //All fields are required to be completed to update the vehicle details
   return (
     <Container component="main" maxWidth="xs">
       <Box
         sx={{
-          // display: "flex",
-          // justifyContent: "right",
-          // // flexDirection: "column",
           marginBottom: 45,
           marginTop: 10,
         }}
@@ -183,16 +183,6 @@ const UpdateCarForm = () => {
           >
             Update Car
           </Button>
-
-          {/* <Button
-            color="error"
-            type="register"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 2, mb: 2, width: 150, height: 50}}
-        >
-            Delete Car
-        </Button> */}
         </Box>
       </Box>
     </Container>

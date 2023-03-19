@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth } from "../../Authentication/auth-provider";
 
+//Sign up form, requires authentication with username and password. All fields are required to sign up. 
 const SignUpForm = () => {
   const { signUp, error } = useAuth();
   const [username, setUsername] = useState("");
@@ -65,6 +66,7 @@ const SignUpForm = () => {
 
           {!!error && <Alert severity="error">{error}</Alert>}
 
+          {/* If already registered as a user, can select below to be redirected to log in page*/}
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link to="/login" component={RouterLink} variant="body2">
