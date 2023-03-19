@@ -15,10 +15,7 @@ const CarListings = ({ vehicles }) => {
               <h2 className="section__title"> Cars Available</h2>
             </Col>
             {vehicles.map((item) => (
-              <CarItem
-                carItem={item}
-                key={item._id}
-              /> /* don't want to show description or transmission here*/
+              <CarItem carItem={item} key={item._id} />
             ))}
           </Row>
         </Container>
