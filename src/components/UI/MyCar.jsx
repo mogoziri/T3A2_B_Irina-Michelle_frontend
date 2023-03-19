@@ -12,6 +12,7 @@ const MyCar = ({ carItem }) => {
     location,
     price_per_day,
     description,
+    availability,
   } = carItem || {};
 
   return (
@@ -43,6 +44,10 @@ const MyCar = ({ carItem }) => {
             <span className=" d-flex align-items-center gap-1">
               <i className="ri-settings-5-line"></i>
               {transmission}
+            </span>
+            <span className=" d-flex align-items-center gap-1">
+              <i className="ri-check-double-line"></i>
+              {availability ? "Available" : "Unavailable"}
             </span>
           </div>
           <Box

@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
       .finally(() => setLoading(false));
   };
 
-   //User logs in successfully, id and token are generated, if successful direct them to home page, otherwise Error message displayed
+  //User logs in successfully, id and token are generated, if successful direct them to home page, otherwise Error message displayed
   const logIn = ({ username, password }) => {
     setLoading(true);
 

@@ -12,7 +12,7 @@ import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth } from "../../Authentication/auth-provider";
 
-//Sign up form, requires authentication with username and password. All fields are required to sign up. 
+//Sign up form, requires authentication with username and password. All fields are required to sign up.
 const SignUpForm = () => {
   const { signUp, error } = useAuth();
   const [username, setUsername] = useState("");

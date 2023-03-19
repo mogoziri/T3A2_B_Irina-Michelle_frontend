@@ -27,7 +27,41 @@ const UpdateCarForm = () => {
   const [location, setLocation] = useState("");
   const [transmission, setTransmission] = useState("");
   const [picture_url, setPictureUrl] = useState("");
-  const [availability, setAvailability] = useState("");
+  const [availability, setAvailability] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
+
+  const isValidForm = () => {
+    const errors = {};
+    let isValid = true;
+
+    if (description.length === 0) {
+      isValid = false;
+      errors.description = "Description cannot be empty";
+    }
+
+    if (transmission.length === 0) {
+      isValid = false;
+      errors.transmission = "Transmission cannot be empty";
+    }
+
+    if (price_per_day.length === 0) {
+      isValid = false;
+      errors.price_per_day = "Price per day cannot be empty";
+    }
+
+    if (location.length === 0) {
+      isValid = false;
+      errors.location = "Location cannot be empty";
+    }
+
+    if (picture_url.length === 0) {
+      isValid = false;
+      errors.picture_url = "Picture URL cannot be empty";
+    }
+
+    setFormErrors(errors);
+    return isValid;
+  };
 
   //a particular vehicle is retrieved for updating with the vehicle_id
   useEffect(() => {
@@ -48,16 +82,18 @@ const UpdateCarForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    updateVehicle({
-      description,
-      transmission,
-      vehicle_id: id,
-      price_per_day: parseInt(price_per_day),
-      location,
-      availability: true,
-      picture_url,
-      owner_id: userId,
-    });
+    if (isValidForm()) {
+      updateVehicle({
+        description,
+        transmission,
+        vehicle_id: id,
+        price_per_day: parseInt(price_per_day),
+        location,
+        availability: availability,
+        picture_url,
+        owner_id: userId,
+      });
+    }
   };
 
   const handleChange = (event) => {
@@ -89,6 +125,8 @@ const UpdateCarForm = () => {
               <TextField
                 required
                 fullWidth
+                error={!!formErrors.description}
+                helperText={formErrors.description && formErrors.description}
                 id="description"
                 label="Description"
                 name="description"
@@ -104,6 +142,8 @@ const UpdateCarForm = () => {
               <TextField
                 required
                 fullWidth
+                error={!!formErrors.transmission}
+                helperText={formErrors.transmission && formErrors.transmission}
                 id="transmission"
                 label="Transmission"
                 name="transmission"
@@ -118,6 +158,8 @@ const UpdateCarForm = () => {
             <TextField
               required
               fullWidth
+              error={!!formErrors.price_per_day}
+              helperText={formErrors.price_per_day && formErrors.price_per_day}
               name="price_per_day"
               label="Price Per Day"
               type="price_per_day"
@@ -134,6 +176,8 @@ const UpdateCarForm = () => {
             <TextField
               required
               fullWidth
+              error={!!formErrors.location}
+              helperText={formErrors.location && formErrors.location}
               name="location"
               label="Location"
               type="location"
@@ -148,6 +192,8 @@ const UpdateCarForm = () => {
             <TextField
               required
               fullWidth
+              error={!!formErrors.picture_url}
+              helperText={formErrors.picture_url && formErrors.picture_url}
               name="picture_url"
               label="Image URL"
               type="picture_url"
@@ -173,7 +219,11 @@ const UpdateCarForm = () => {
             </Select>
           </Grid>
 
-          {!!error && <Alert severity="error">{error}</Alert>}
+          {!!error && (
+            <Alert severity="error">
+              Unable to save car. Please check your input.
+            </Alert>
+          )}
 
           <Button
             type="register"
