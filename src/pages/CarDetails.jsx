@@ -6,7 +6,7 @@ import CarDetailedItem from "../components/UI/CarDetailedItem";
 
 import { Container, Row, Col } from "reactstrap";
 
-/* Needs to connect to Book Now Button on Car Listing Page*/
+/*Displays a Vehicle's details - connects to Book Now Button on Car Listings*/
 const CarDetails = () => {
   const [vehicle, setVehicle] = useState({});
   const [/*error*/ setError] = useState("");
