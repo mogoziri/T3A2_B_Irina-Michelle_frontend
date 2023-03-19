@@ -3,7 +3,7 @@ import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/car-item.css";
 
-//creates a CarItem (Object) with the below properties displayed 
+//creates a CarItem (Object) with the below properties displayed
 const CarItem = ({ carItem }) => {
   const {
     _id,

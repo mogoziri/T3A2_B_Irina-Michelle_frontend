@@ -35,7 +35,7 @@ export const useVehicle = () => {
       });
   };
 
-    //retrieve vehicle by vehicle_id, if successful update a Vehicle navigate home otherwise send error message. 
+  //retrieve vehicle by vehicle_id, if successful update a Vehicle navigate home otherwise send error message.
   const updateVehicle = ({
     description,
     transmission,
@@ -58,7 +58,7 @@ export const useVehicle = () => {
         picture_url,
       })
       .then(() => {
-        navigate(`/cars/${vehicle_id}`);
+        navigate(`/my-cars`);
       })
       .catch((error) => {
         setError(error);

@@ -15,18 +15,54 @@ const ListMyCarForm = () => {
   const [transmission, setTransmission] = useState("");
   const [picture_url, setPictureUrl] = useState("");
   const [description, setDescription] = useState("");
+  const [formErrors, setFormErrors] = useState({});
+
+  const isValidForm = () => {
+    const errors = {};
+    let isValid = true;
+
+    if (description.length === 0) {
+      isValid = false;
+      errors.description = "Description cannot be empty";
+    }
+
+    if (transmission.length === 0) {
+      isValid = false;
+      errors.transmission = "Transmission cannot be empty";
+    }
+
+    if (price_per_day.length === 0) {
+      isValid = false;
+      errors.price_per_day = "Price per day cannot be empty";
+    }
+
+    if (location.length === 0) {
+      isValid = false;
+      errors.location = "Location cannot be empty";
+    }
+
+    if (picture_url.length === 0) {
+      isValid = false;
+      errors.picture_url = "Picture URL cannot be empty";
+    }
+
+    setFormErrors(errors);
+    return isValid;
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    listVehicle({
-      description,
-      transmission,
-      price_per_day: parseInt(price_per_day),
-      location,
-      availability: true,
-      picture_url,
-      owner_id: userId,
-    });
+    if (isValidForm()) {
+      listVehicle({
+        description,
+        transmission,
+        price_per_day: parseInt(price_per_day),
+        location,
+        availability: true,
+        picture_url,
+        owner_id: userId,
+      });
+    }
   };
 
   //User to fill in the fields of the form and select save car button to add car to DB/ website (All fields are required to list a car)
@@ -58,6 +94,8 @@ const ListMyCarForm = () => {
               <TextField
                 required
                 fullWidth
+                error={!!formErrors.description}
+                helperText={formErrors.description && formErrors.description}
                 id="description"
                 label="Description"
                 name="description"
@@ -73,6 +111,8 @@ const ListMyCarForm = () => {
               <TextField
                 required
                 fullWidth
+                error={!!formErrors.transmission}
+                helperText={formErrors.transmission && formErrors.transmission}
                 id="transmission"
                 label="Transmission"
                 name="transmission"
@@ -87,6 +127,8 @@ const ListMyCarForm = () => {
             <TextField
               required
               fullWidth
+              error={!!formErrors.price_per_day}
+              helperText={formErrors.price_per_day && formErrors.price_per_day}
               name="price_per_day"
               label="Price Per Day"
               type="price_per_day"
@@ -103,6 +145,8 @@ const ListMyCarForm = () => {
             <TextField
               required
               fullWidth
+              error={!!formErrors.location}
+              helperText={formErrors.location && formErrors.location}
               name="location"
               label="Location"
               type="location"
@@ -117,6 +161,8 @@ const ListMyCarForm = () => {
             <TextField
               required
               fullWidth
+              error={!!formErrors.picture_url}
+              helperText={formErrors.picture_url && formErrors.picture_url}
               name="picture_url"
               label="Image URL"
               type="picture_url"
@@ -127,7 +173,11 @@ const ListMyCarForm = () => {
             />
           </Grid>
 
-          {!!error && <Alert severity="error">{error}</Alert>}
+          {!!error && (
+            <Alert severity="error">
+              Unable to save car. Please check your input.
+            </Alert>
+          )}
 
           <Button
             type="register"
