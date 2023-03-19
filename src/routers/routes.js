@@ -11,6 +11,7 @@ import SignUp from "../pages/SignUp";
 import UpdateCar from "../pages/UpdateCars";
 import { useAuth } from "../Authentication/auth-provider";
 
+//creates the routes for front end pages
 const Routers = () => {
   const { isLoggedIn } = useAuth();
 

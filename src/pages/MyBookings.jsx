@@ -4,6 +4,7 @@ import { useAuth } from "../Authentication/auth-provider";
 import * as vehiclesApi from "../API/api-vehicles";
 import MyBooking from "../components/UI/MyBooking";
 
+//My Booking page
 const MyBookings = () => {
   const { userId } = useAuth();
   const [reservations, setReservations] = useState([]);

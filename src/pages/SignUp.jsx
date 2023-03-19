@@ -1,6 +1,7 @@
 import React from "react";
 import SignUpForm from "../components/UI/SignUpForm";
 
+//Sign up page
 const SignUp = () => {
   return (
     <div

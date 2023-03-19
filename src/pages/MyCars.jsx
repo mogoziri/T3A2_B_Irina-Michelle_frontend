@@ -6,6 +6,7 @@ import MyReservation from "../components/UI/MyReservation";
 
 import { Container, Row } from "reactstrap";
 
+//My car with a list of all users cars in DB and their reservations for owners approval or decline
 const MyCars = () => {
   const { userId } = useAuth();
   const [vehicles, setVehicles] = useState([]);

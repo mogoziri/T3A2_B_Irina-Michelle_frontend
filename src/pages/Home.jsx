@@ -6,6 +6,7 @@ import InfoSection from "../components/UI/InfoSection";
 import { Container, Col } from "reactstrap";
 import CarListings from "./CarListings";
 
+//Home page - displays all vehicles that can be reserved
 const Home = () => {
   const [vehicles, setVehicles] = useState([]);
   const [/*error*/ setError] = useState("");
