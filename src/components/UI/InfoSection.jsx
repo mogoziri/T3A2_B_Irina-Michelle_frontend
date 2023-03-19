@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { Container, Row, Col} from "reactstrap";
 import "../../styles/info-section.css";
 import { Box } from "@mui/material";
 
+//this is the info section on the home page. Prompts fot the user to sign up or log in if they want to rent a car or list their car/s.
 const InfoSection = () => {
   return (
     <section className="middle__home">
