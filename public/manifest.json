@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Carental",
+  "name": "Carental is the new way to rent a car.",
   "icons": [
     {
       "src": "favicon.ico",
