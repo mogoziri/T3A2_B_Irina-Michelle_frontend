@@ -14,6 +14,7 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  //call to server to logout. Display home page when logged out.
   const logout = () => {
     localStorage.removeItem("user-token");
     setUserId();
@@ -21,10 +22,12 @@ export const AuthProvider = ({ children }) => {
     navigate("/");
   };
 
+  //set error
   useEffect(() => {
     if (error) setError(null);
   }, [location.pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  //If user is in DB retrieve/get user info is successful, if they are not in DB send error message
   useEffect(() => {
     usersApi
       .getCurrentUser()
@@ -40,6 +43,7 @@ export const AuthProvider = ({ children }) => {
       .finally(() => setLoadingInitial(false));
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  //User signs up successfully, id and token are generated, if successful direct them to home page, otherwise Error message displayed
   const signUp = ({ username, password }) => {
     setLoading(true);
 
@@ -59,6 +63,7 @@ export const AuthProvider = ({ children }) => {
       .finally(() => setLoading(false));
   };
 
+   //User logs in successfully, id and token are generated, if successful direct them to home page, otherwise Error message displayed
   const logIn = ({ username, password }) => {
     setLoading(true);
 
