@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useNavigate /*useLocation*/ } from "react-router-dom";
 import * as vehiclesApi from "../API/api-vehicles";
 
+//call to server to use Vehicle
 export const useVehicle = () => {
   const [error, setError] = useState();
   const navigate = useNavigate();
 
+  //if successful in listing a Vehicle navigate home otherwise send error message.
   const listVehicle = ({
     description,
     transmission,
@@ -33,6 +35,7 @@ export const useVehicle = () => {
       });
   };
 
+    //retrieve vehicle by vehicle_id, if successful update a Vehicle navigate home otherwise send error message. 
   const updateVehicle = ({
     description,
     transmission,
