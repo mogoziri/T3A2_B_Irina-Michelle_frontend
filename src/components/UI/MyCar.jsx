@@ -4,6 +4,7 @@ import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/car-item.css";
 
+// Display information about particular car
 const MyCar = ({ carItem }) => {
   const {
     _id,

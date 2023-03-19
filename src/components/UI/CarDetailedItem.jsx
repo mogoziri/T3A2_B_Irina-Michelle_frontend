@@ -8,6 +8,7 @@ import "../../styles/car-item.css";
 import { useAuth } from "../../Authentication/auth-provider";
 import * as vehiclesApi from "../../API/api-vehicles";
 
+// Display information about particular car available for booking
 const customStyles = {
   content: {
     top: "50%",

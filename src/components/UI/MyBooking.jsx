@@ -4,6 +4,7 @@ import { Col } from "reactstrap";
 import "../../styles/car-item.css";
 import * as vehiclesApi from "../../API/api-vehicles";
 
+// Display information about user booking
 const MyBooking = ({ reservationItem }) => {
   const { _id, reserve_from, status, vehicle } = reservationItem;
   const { picture_url, price_per_day, description } = vehicle || {};
